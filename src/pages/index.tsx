@@ -21,9 +21,9 @@ export default function Home() {
 
       <main className="container px-4 mx-auto">
         {/* headlie section */}
-        <section className="container flex flex-col justify-between p-2 mt-6 mx-auto mb-10">
+        <section className="container flex flex-col justify-between p-2 mt-6 mx-auto md:mb-10 lg:mb-0">
           <div className="flex flex-wrap">
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 mb-8">
               <h1 className="mb-5 text-3xl lg:text-5xl font-bold leading-tight text-brown-900 uppercase">
                 Temukan kulit sehatmu dengan rangkaian produk kami
               </h1>
@@ -42,7 +42,7 @@ export default function Home() {
                 </div>
               </button>
             </div>
-            <div className="w-full lg:w-1/2">
+            <div className="w-full lg:w-1/2 h-[450px] lg:h-fit">
               <Carousel>
                 <Image
                   height={1280}
@@ -341,7 +341,7 @@ export default function Home() {
           </div>
         </section>
         {/* our seller */}
-        <section className="container p-2 mx-auto mb-16">
+        <section className="container p-2 mx-auto mb-10">
           <div className="w-full inline-flex justify-between items-center mb-3">
             <div>
               <h1 className="mb-5 text-2xl lg:text-4xl font-bold leading-tight text-brown-900 uppercase">
@@ -349,7 +349,7 @@ export default function Home() {
               </h1>
             </div>
           </div>
-          <div className="flex flex-wrapr border border-pic-100 rounded-md shadow-lg relative overflow-hidden">
+          <div className="flex flex-wrap border border-pic-100 rounded-md shadow-lg relative overflow-hidden mb-8">
             <div className="w-full lg:w-1/2">
               <div className="text-center h-full flex items-center justify-center w-full text-5xl font-bold bg-pic-900">
                 MAPS
@@ -360,39 +360,22 @@ export default function Home() {
                 <div className="flex justify-center mb-3">
                   <h3 className="uppercase text-xl font-bold text-center text-brown-900 group hover:text-pic-800 inline-flex items-center cursor-pointer ease-in-out delay-75 duration-150 mb-3">
                     Temukan Agen dan Reseller LS Skincare
-                    <MagnifyingGlassIcon className="h-6 w-6 fill-pic-800 text-brown-800 group-hover:ml-1.5 group-hover:fill-brown-800 group-hover:text-pic-800 ml-0.5 ease-in delay-75 duration-150" />
+                    <MagnifyingGlassIcon className="h-6 w-6 text-brown-800 group-hover:ml-1.5 group-hover:text-pic-800 ml-0.5 ease-in delay-75 duration-150" />
                   </h3>
                 </div>
                 <div className="mb-5 px-4">
-                  <label
-                    for="default-search"
-                    className="mb-2 text-sm font-medium text-brown-900 sr-only dark:text-white"
-                  >
+                  <label className="mb-2 text-sm font-medium text-brown-900 sr-only dark:text-white">
                     Search
                   </label>
                   <div className="relative">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                      <svg
-                        aria-hidden="true"
-                        className="w-5 h-5 text-brown-500 dark:text-gray-400"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                        ></path>
-                      </svg>
+                      <MagnifyingGlassIcon className="w-5 h-5 text-brown-500 dark:text-brown-400" />
                     </div>
                     <input
                       type="search"
                       id="default-search"
-                      className="block w-full p-4 pl-10 text-sm text-brown-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-pic-500 focus:border-pic-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-pic-500 dark:focus:border-pic-500"
-                      placeholder="Search Mockups, Logos..."
+                      className="block w-full p-4 pl-10 text-sm text-brown-900 border border-brown-300 rounded-lg bg-brown-50 focus:ring-pic-500 focus:border-pic-500 dark:bg-brown-700 dark:border-brown-600 dark:placeholder-brown-400 dark:text-white dark:focus:ring-pic-500 dark:focus:border-pic-500"
+                      placeholder="Nama kota/kabupaten"
                       required
                     />
                     <button
@@ -421,6 +404,144 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+          {/* pricing join */}
+          <div className="py-5">
+            <h1 className="mb-10 text-2xl lg:text-4xl font-bold leading-tight text-brown-900 uppercase text-center">
+              Join us
+            </h1>
+            <div className="flex flex-col sm:flex-col lg:flex-row xl:flex-row md:flex-row justify-center items center container">
+              <div className="py-12 sm:py-12 md:py-6 lg:py-6 xl:py-6 px-8 w-full md:max-w-min sm:w-full bg-pic-200 z-30">
+                <h1 className="text-brown-500 font-semibold text-xl">
+                  End User
+                </h1>
+                <div className="text-center py-4 px-7">
+                  <h1 className="text-brown-700 text-4xl font-black">
+                    $199.00
+                  </h1>
+                  <p className="text-brown-500  mt-2">Monthely</p>
+                </div>
+                <div className="h-px bg-brown-200"></div>
+                <div className="text-center mt-3">
+                  <ul>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                  </ul>
+                </div>
+                <button className="w-full mt-6 mb-3 py-2 text-white font-semibold bg-brown-700 hover:shadow-xl duration-200 hover:bg-brown-800">
+                  Buy Now
+                </button>
+              </div>
+              <div className="py-12 sm:py-12 md:py-6 lg:py-6 xl:py-6 px-8 w-full md:max-w-min sm:w-full bg-pic-700 transform scale-1 sm:scale-1 md:scale-105 lg:scale-105 xl:scale-105 z-40  shadow-none sm:shadow-none md:shadow-xl lg:shadow-xl xl:shadow-xl">
+                <h1 className="text-brown-800 font-semibold text-xl ">
+                  Reseller
+                </h1>
+                <div className="text-center py-4 px-7">
+                  <h1 className="text-white text-4xl font-black">$399.00</h1>
+                  <p className="text-white text-opacity-50 mt-2">Monthely</p>
+                </div>
+                <div className="h-px bg-brown-400"></div>
+                <div className="text-center mt-3">
+                  <ul>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                  </ul>
+                </div>
+                <button className="w-full mt-6 mb-3 py-2 text-white font-semibold bg-brown-400 hover:shadow-xl duration-200 hover:bg-brown-800">
+                  Buy Now
+                </button>
+              </div>
+              <div className="py-12 sm:py-12 md:py-6 lg:py-6 xl:py-6 px-8 w-full md:max-w-min sm:w-full bg-pic-200 z-30">
+                <h1 className="text-brown-500 font-semibold text-xl ">
+                  Enterprise
+                </h1>
+                <div className="text-center py-4 px-7">
+                  <h1 className="text-brown-700 text-4xl font-black">
+                    $899.00
+                  </h1>
+                  <p className="text-brown-500  mt-2">Monthely</p>
+                </div>
+                <div className="h-px bg-brown-200"></div>
+                <div className="text-center mt-3">
+                  <ul>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                    <li className="text-start text-sm font-light">
+                      Lorem ipsum dolor sit amet.
+                    </li>
+                  </ul>
+                </div>
+                <button className="w-full mt-6 mb-3 py-2 text-white font-semibold bg-brown-700 hover:shadow-xl duration-200 hover:bg-brown-800">
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        {/* media */}
+        <section className="container p-2 mx-auto mb-16">
+          <div className="w-full inline-flex justify-between items-center mb-3">
+            <div>
+              <h1 className="mb-5 text-2xl lg:text-4xl font-bold leading-tight text-brown-900 uppercase">
+                Media
+              </h1>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 mx-auto w-full text-center">
+            <div className="h-[400px] bg-pic-100 flex items-center justify-center rounded-sm">
+              <h3 className="uppercase text-xl font-bold text-brown-900 group hover:text-pic-800 inline-flex items-center cursor-pointer ease-in-out delay-75 duration-150 mb-3">
+                Testimoni
+                <ArrowRightCircleIcon className="h-6 w-6 fill-pic-800 text-brown-800 group-hover:ml-1.5 group-hover:fill-brown-800 group-hover:text-pic-800 ml-0.5 ease-in delay-75 duration-150" />
+              </h3>
+            </div>
+            <div className="h-[400px] bg-pic-100 flex items-center justify-center rounded-sm">
+              <h3 className="uppercase text-xl font-bold text-brown-900 group hover:text-pic-800 inline-flex items-center cursor-pointer ease-in-out delay-75 duration-150 mb-3">
+                Testimoni
+                <ArrowRightCircleIcon className="h-6 w-6 fill-pic-800 text-brown-800 group-hover:ml-1.5 group-hover:fill-brown-800 group-hover:text-pic-800 ml-0.5 ease-in delay-75 duration-150" />
+              </h3>
+            </div>
+            <div className="h-[400px] bg-pic-100 flex items-center justify-center rounded-sm">
+              <h3 className="uppercase text-xl font-bold text-brown-900 group hover:text-pic-800 inline-flex items-center cursor-pointer ease-in-out delay-75 duration-150 mb-3">
+                Testimoni
+                <ArrowRightCircleIcon className="h-6 w-6 fill-pic-800 text-brown-800 group-hover:ml-1.5 group-hover:fill-brown-800 group-hover:text-pic-800 ml-0.5 ease-in delay-75 duration-150" />
+              </h3>
             </div>
           </div>
         </section>

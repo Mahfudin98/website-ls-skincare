@@ -75,7 +75,7 @@ export default function FooterCustom() {
               </li>
             </ul>
           </div>
-          <div className="col-span-12 md:col-span-6 lg:col-span-2">
+          <div className="col-span-12 md:col-span-4 lg:col-span-2">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
               <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
                 Menu
@@ -105,7 +105,7 @@ export default function FooterCustom() {
               </li>
             </ul>
           </div>
-          <div className="col-span-12 md:col-span-6 lg:col-span-3">
+          <div className="col-span-12 md:col-span-4 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
               <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
                 About Us
@@ -131,7 +131,7 @@ export default function FooterCustom() {
               </li>
             </ul>
           </div>
-          <div className="col-span-6 md:col-span-4 lg:col-span-2">
+          <div className="col-span-6 md:col-span-6 lg:col-span-2">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
               <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
                 Social Media
@@ -186,7 +186,7 @@ export default function FooterCustom() {
               </li>
             </ul>
           </div>
-          <div className="col-span-12 md:col-span-4 lg:col-span-3">
+          <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
               <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
                 Help Desk
