@@ -6,14 +6,14 @@ import styles from "./Header.module.css";
 
 export default function HeaderCustom() {
   const fixedRef = useRef(null);
-  const [fixed, setFixed] = useState("w-full");
+  const [fixed, setFixed] = useState("w-full border-b border-gray-300");
   const [offste, setOffset] = useState(0);
 
   const listenScrollEvent = () => {
     if (window.scrollY > offste + 100) {
       setFixed(styles["header-fixed"]);
     } else {
-      setFixed("");
+      setFixed("w-full border-b border-gray-300");
     }
   };
 
@@ -29,9 +29,9 @@ export default function HeaderCustom() {
       <div className="container mx-auto">
         <nav className={styles.nav}>
           <div className={styles["nav-flex"]}>
-            <a href="https://flowbite.com/" className="flex items-center">
+            <a href="#" className="flex items-center">
               <Image
-                src="https://flowbite.com/docs/images/logo.svg"
+                src="/logo.png"
                 className="object-cover w-8 h-8 mr-3"
                 height={150}
                 width={150}
