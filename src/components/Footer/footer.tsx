@@ -55,7 +55,7 @@ export default function FooterCustom() {
         <div className="relative grid grid-cols-12 gap-6 px-2 mb-5">
           <div className="col-span-6 md:col-span-4 lg:col-span-2">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
-              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
+              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
                 Contact Us
               </h1>
               <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />
@@ -77,7 +77,7 @@ export default function FooterCustom() {
           </div>
           <div className="col-span-12 md:col-span-4 lg:col-span-2">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
-              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
+              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
                 Menu
               </h1>
               <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />
@@ -107,7 +107,7 @@ export default function FooterCustom() {
           </div>
           <div className="col-span-12 md:col-span-4 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
-              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
+              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
                 About Us
               </h1>
               <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />
@@ -133,7 +133,7 @@ export default function FooterCustom() {
           </div>
           <div className="col-span-6 md:col-span-6 lg:col-span-2">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
-              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
+              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
                 Social Media
               </h1>
               <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />
@@ -188,7 +188,7 @@ export default function FooterCustom() {
           </div>
           <div className="col-span-12 md:col-span-6 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
-              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
+              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
                 Help Desk
               </h1>
               <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />

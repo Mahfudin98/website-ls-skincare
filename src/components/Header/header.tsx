@@ -47,7 +47,7 @@ export default function HeaderCustom() {
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3BottomRightIcon className="w-6 h-6 fill-[#4E342E]" />
+              <Bars3BottomRightIcon className="w-6 h-6 fill-brown-900" />
             </button>
             <div
               className="hidden w-full md:block md:w-auto"
@@ -66,17 +66,17 @@ export default function HeaderCustom() {
                 </li>
                 <li>
                   <a href="#" className={styles["nav-li"]}>
-                    <span className={styles["animation-li"]}>Services</span>
+                    <span className={styles["animation-li"]}>Product</span>
                   </a>
                 </li>
                 <li>
                   <a href="#" className={styles["nav-li"]}>
-                    <span className={styles["animation-li"]}>Pricing</span>
+                    <span className={styles["animation-li"]}>Seller</span>
                   </a>
                 </li>
                 <li>
                   <a href="#" className={styles["nav-li"]}>
-                    <span className={styles["animation-li"]}>Contact</span>
+                    <span className={styles["animation-li"]}>Media</span>
                   </a>
                 </li>
               </ul>
