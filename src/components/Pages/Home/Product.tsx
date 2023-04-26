@@ -5,6 +5,7 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import styles from "./home.module.css";
+import Link from "next/link";
 
 export default function ProductHome() {
   return (
@@ -13,14 +14,14 @@ export default function ProductHome() {
         <div>
           <h1>Our Popular Product</h1>
         </div>
-        <div className="hidden lg:block">
+        <Link href="/product" className="hidden lg:block">
           <h3 className={`${styles["h3-title"]} group`}>
             View All
             <ArrowRightCircleIcon
               className={`${styles["h3-icon"]} group-hover:ml-1.5 group-hover:fill-brown-800 group-hover:text-pic-800`}
             />
           </h3>
-        </div>
+        </Link>
       </div>
       <div className="grid grid-cols-12 gap-6 px-2 md:px-6">
         <div className="col-span-12 md:col-span-6 lg:col-span-4">
@@ -198,14 +199,17 @@ export default function ProductHome() {
           </div>
         </div>
         <div className="col-span-12 md:col-span-6 lg:col-span-12">
-          <div className="flex justify-center w-full items-center h-full lg:mt-3">
+          <Link
+            href="/product"
+            className="flex justify-center w-full items-center h-full lg:mt-3"
+          >
             <h3 className="uppercase text-xl font-bold text-brown-900 group hover:text-pic-800 inline-flex items-center cursor-pointer ease-in-out delay-75 duration-150">
               View All
               <ArrowRightCircleIcon
                 className={`${styles["h3-icon"]} group-hover:ml-1.5 group-hover:fill-brown-800 group-hover:text-pic-800`}
               />
             </h3>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

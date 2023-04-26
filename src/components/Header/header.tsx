@@ -3,18 +3,26 @@ import { Inter } from "next/font/google";
 import { Bars3BottomRightIcon } from "@heroicons/react/24/outline";
 import { useRef, useState, useEffect } from "react";
 import styles from "./Header.module.css";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function HeaderCustom() {
   const fixedRef = useRef(null);
   const [fixed, setFixed] = useState("w-full border-b border-gray-300");
   const [offste, setOffset] = useState(0);
-
+  const router = useRouter();
   const listenScrollEvent = () => {
     if (window.scrollY > offste + 100) {
       setFixed(styles["header-fixed"]);
     } else {
       setFixed("w-full border-b border-gray-300");
     }
+  };
+
+  // button
+  const [isOpen, setIsOpen] = useState(false);
+  const listenNavigate = () => {
+    setIsOpen((current) => !current);
   };
 
   useEffect(() => {
@@ -26,10 +34,10 @@ export default function HeaderCustom() {
   }, [setFixed, fixedRef]);
   return (
     <header ref={fixedRef} className={`${fixed}`}>
-      <div className="container mx-auto">
+      <div className="container mx-auto px-4 md:py-2">
         <nav className={styles.nav}>
           <div className={styles["nav-flex"]}>
-            <a href="#" className="flex items-center">
+            <Link href="/" className="flex items-center">
               <Image
                 src="/logo.png"
                 className="object-cover w-8 h-8 mr-3"
@@ -38,8 +46,9 @@ export default function HeaderCustom() {
                 alt="Flowbite Logo"
               />
               <span className={styles["logo-text"]}>LS Skincare</span>
-            </a>
+            </Link>
             <button
+              onClick={listenNavigate}
               data-collapse-toggle="navbar-default"
               type="button"
               className={styles["button-toggle"]}
@@ -50,34 +59,112 @@ export default function HeaderCustom() {
               <Bars3BottomRightIcon className="w-6 h-6 fill-brown-900" />
             </button>
             <div
-              className="hidden w-full md:block md:w-auto"
+              className={`w-full md:block md:w-auto ${isOpen ? "" : "hidden"}`}
               id="navbar-default"
             >
               <ul className={styles["nav-ul"]}>
                 <li>
-                  <a href="#" className={styles.active} aria-current="page">
-                    <span className={styles["active-span"]}>Home</span>
-                  </a>
+                  <Link
+                    href="/"
+                    className={
+                      router.pathname == "/" ? styles.active : styles["nav-li"]
+                    }
+                    aria-current="page"
+                  >
+                    <span
+                      className={
+                        router.pathname == "/"
+                          ? styles["active-span"]
+                          : styles["animation-li"]
+                      }
+                    >
+                      Home
+                    </span>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className={styles["nav-li"]}>
-                    <span className={styles["animation-li"]}>About</span>
-                  </a>
+                  <Link
+                    href="/about"
+                    className={
+                      router.pathname == "/about"
+                        ? styles.active
+                        : styles["nav-li"]
+                    }
+                    aria-current="page"
+                  >
+                    <span
+                      className={
+                        router.pathname == "/about"
+                          ? styles["active-span"]
+                          : styles["animation-li"]
+                      }
+                    >
+                      About
+                    </span>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className={styles["nav-li"]}>
-                    <span className={styles["animation-li"]}>Product</span>
-                  </a>
+                  <Link
+                    href="/product"
+                    className={
+                      router.pathname == "/product"
+                        ? styles.active
+                        : styles["nav-li"]
+                    }
+                    aria-current="page"
+                  >
+                    <span
+                      className={
+                        router.pathname == "/product"
+                          ? styles["active-span"]
+                          : styles["animation-li"]
+                      }
+                    >
+                      Product
+                    </span>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className={styles["nav-li"]}>
-                    <span className={styles["animation-li"]}>Seller</span>
-                  </a>
+                  <Link
+                    href="/seller"
+                    className={
+                      router.pathname == "/seller"
+                        ? styles.active
+                        : styles["nav-li"]
+                    }
+                    aria-current="page"
+                  >
+                    <span
+                      className={
+                        router.pathname == "/seller"
+                          ? styles["active-span"]
+                          : styles["animation-li"]
+                      }
+                    >
+                      Seller
+                    </span>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className={styles["nav-li"]}>
-                    <span className={styles["animation-li"]}>Media</span>
-                  </a>
+                  <Link
+                    href="/media"
+                    className={
+                      router.pathname == "/media"
+                        ? styles.active
+                        : styles["nav-li"]
+                    }
+                    aria-current="page"
+                  >
+                    <span
+                      className={
+                        router.pathname == "/media"
+                          ? styles["active-span"]
+                          : styles["animation-li"]
+                      }
+                    >
+                      Media
+                    </span>
+                  </Link>
                 </li>
               </ul>
             </div>

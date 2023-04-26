@@ -1,13 +1,13 @@
 import styles from "./footer.module.css";
 import Image from "next/image";
 import {
-  SparklesIcon,
   RectangleGroupIcon,
-  PhoneIcon,
   QuestionMarkCircleIcon
 } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 export default function FooterCustom() {
+  const years = new Date().getFullYear();
   return (
     <footer className="bg-pic-900">
       <div className="container p-4 mx-auto">
@@ -53,7 +53,7 @@ export default function FooterCustom() {
         <hr className="h-px my-6 bg-gray-200 border-0 dark:bg-gray-700" />
         {/* center */}
         <div className="relative grid grid-cols-12 gap-6 px-2 mb-5">
-          <div className="col-span-6 md:col-span-4 lg:col-span-2">
+          <div className="col-span-6 md:col-span-12 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
               <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
                 Contact Us
@@ -75,7 +75,7 @@ export default function FooterCustom() {
               </li>
             </ul>
           </div>
-          <div className="col-span-12 md:col-span-4 lg:col-span-2">
+          <div className="col-span-6 md:col-span-4 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
               <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
                 Menu
@@ -84,54 +84,28 @@ export default function FooterCustom() {
             </div>
             <ul className="">
               <li className="mb-1">
-                <a href="#" className={styles["nav-li"]}>
+                <Link href="/about" className={styles["nav-li"]}>
                   <RectangleGroupIcon className="w-5 h-5 mr-1 " /> About Us
-                </a>
+                </Link>
               </li>
               <li className="mb-1">
-                <a href="#" className={styles["nav-li"]}>
+                <Link href="/product" className={styles["nav-li"]}>
                   <RectangleGroupIcon className="w-5 h-5 mr-1 " /> Our Product
-                </a>
+                </Link>
               </li>
               <li className="mb-1">
-                <a href="#" className={styles["nav-li"]}>
+                <Link href="/seller" className={styles["nav-li"]}>
                   <RectangleGroupIcon className="w-5 h-5 mr-1 " /> Our Seller
-                </a>
+                </Link>
               </li>
               <li className="mb-1">
-                <a href="#" className={styles["nav-li"]}>
+                <Link href="/media" className={styles["nav-li"]}>
                   <RectangleGroupIcon className="w-5 h-5 mr-1 " /> Media
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
-          <div className="col-span-12 md:col-span-4 lg:col-span-3">
-            <div className="relative mb-5 overflow-hidden cursor-pointer group">
-              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
-                About Us
-              </h1>
-              <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />
-            </div>
-            <ul className="">
-              <li className="mb-1">
-                <a href="#" className={styles["nav-li"]}>
-                  <SparklesIcon className="w-5 h-5 mr-1 " /> Brand Story
-                </a>
-              </li>
-              <li className="mb-1">
-                <a href="#" className={styles["nav-li"]}>
-                  <SparklesIcon className="w-5 h-5 mr-1 " /> All Brand
-                </a>
-              </li>
-              <li className="mb-1">
-                <a href="#" className={styles["nav-li"]}>
-                  <SparklesIcon className="w-5 h-5 mr-1 " /> LS Skincare
-                  Aesthetic Clinic
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-span-6 md:col-span-6 lg:col-span-2">
+          <div className="col-span-6 md:col-span-4 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
               <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
                 Social Media
@@ -186,7 +160,7 @@ export default function FooterCustom() {
               </li>
             </ul>
           </div>
-          <div className="col-span-12 md:col-span-6 lg:col-span-3">
+          <div className="col-span-6 md:col-span-4 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
               <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
                 Help Desk
@@ -207,7 +181,7 @@ export default function FooterCustom() {
               </li>
               <li className="mb-1">
                 <a href="#" className={styles["nav-li"]}>
-                  <QuestionMarkCircleIcon className="w-5 h-5 mr-1 " /> Sitemap
+                  <QuestionMarkCircleIcon className="w-5 h-5 mr-1" /> Sitemap
                 </a>
               </li>
             </ul>
@@ -216,7 +190,9 @@ export default function FooterCustom() {
       </div>
       {/* bottom */}
       <div className="py-2 text-center bg-pic-800">
-        <p className="text-sm font-light text-brown-800">© LS Skincare 2023</p>
+        <p className="text-sm font-light text-brown-800">
+          © LS Skincare {years}
+        </p>
       </div>
     </footer>
   );
