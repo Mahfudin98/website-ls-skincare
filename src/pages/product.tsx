@@ -6,9 +6,11 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import styles from "../components/Pages/Home/home.module.css";
+import Breadcrumb from "@/components/Widget/breadcrumb";
 export default function Product() {
   return (
     <Layout pageTitle="Product">
+      <Breadcrumb title="Product" navigate="product" />
       <section className={`${styles["section-def"]}`}>
         <div className="w-full inline-flex justify-between items-center mb-3">
           <div>

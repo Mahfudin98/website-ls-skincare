@@ -11,9 +11,9 @@
     @apply self-center mb-3 text-base font-semibold text-white whitespace-nowrap dark:text-white;
   }
   .market-image {
-    @apply inline-block w-12 h-12 p-2 duration-300 ease-out delay-100 bg-brown-800 rounded-full ring-2 ring-white brightness-50 hover:brightness-100 hover:bg-white;
+    @apply inline-block w-12 h-12 p-2 duration-300 ease-linear delay-100 bg-brown-800 rounded-full ring-2 ring-white brightness-50 hover:brightness-100 hover:bg-white;
   }
   .nav-li {
-    @apply relative inline-flex items-center text-sm font-normal text-brown-900 hover:text-white ease-in duration-150 delay-75 after:content-[''] after:bg-white after:w-full after:h-[2px] after:absolute after:-bottom-1 after:left-0 after:scale-0 after:hover:scale-100 after:origin-left after:ease-in after:duration-150 after:delay-75;
+    @apply relative inline-flex items-center text-sm font-normal text-brown-900 hover:text-white ease-linear duration-300 delay-100 after:content-[''] after:bg-white after:w-full after:h-[2px] after:absolute after:-bottom-1 after:left-0 after:scale-0 after:hover:scale-100 after:origin-left after:ease-in after:duration-150 after:delay-75;
   }
 }
