@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
+import { Carousel } from "flowbite-react";
 
 export default function BrandStory() {
   return (
     <section className="container mx-auto px-4 pt-10 mb-5">
       <h1>Brand Story</h1>
       <div>
-        <div className="carousel w-full rounded-box">
+        <Carousel>
           <div id="slide1" className="carousel-item relative w-full">
             <div className="bg-pic-900 mb-0 h-[350px] w-full flex flex-col justify-center items-center rounded-md shadow-md shadow-brown-400">
               <h1 className="text-white text-center">Sejarah LS Skincare</h1>
@@ -17,14 +18,6 @@ export default function BrandStory() {
                 View more
                 <ArrowRightCircleIcon className="h-6 w-6 ml-1 group-hover:ml-2 ease-in duration-100 delay-0" />
               </label>
-            </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide6" className="btn btn-circle">
-                ❮
-              </a>
-              <a href="#slide2" className="btn btn-circle">
-                ❯
-              </a>
             </div>
           </div>
           <div id="slide2" className="carousel-item relative w-full">
@@ -40,14 +33,6 @@ export default function BrandStory() {
                 <ArrowRightCircleIcon className="h-6 w-6 ml-1 group-hover:ml-2 ease-in duration-100 delay-0" />
               </label>
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide1" className="btn btn-circle">
-                ❮
-              </a>
-              <a href="#slide3" className="btn btn-circle">
-                ❯
-              </a>
-            </div>
           </div>
           <div id="slide3" className="carousel-item relative w-full">
             <div className="bg-pic-900 mb-0 h-[350px] w-full flex flex-col justify-center items-center rounded-md shadow-md shadow-brown-400">
@@ -62,14 +47,6 @@ export default function BrandStory() {
                 <ArrowRightCircleIcon className="h-6 w-6 ml-1 group-hover:ml-2 ease-in duration-100 delay-0" />
               </label>
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide2" className="btn btn-circle">
-                ❮
-              </a>
-              <a href="#slide4" className="btn btn-circle">
-                ❯
-              </a>
-            </div>
           </div>
           <div id="slide4" className="carousel-item relative w-full">
             <div className="bg-pic-900 mb-0 h-[350px] w-full flex flex-col justify-center items-center rounded-md shadow-md shadow-brown-400">
@@ -81,14 +58,6 @@ export default function BrandStory() {
                 View more
                 <ArrowRightCircleIcon className="h-6 w-6 ml-1 group-hover:ml-2 ease-in duration-100 delay-0" />
               </label>
-            </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide3" className="btn btn-circle">
-                ❮
-              </a>
-              <a href="#slide5" className="btn btn-circle">
-                ❯
-              </a>
             </div>
           </div>
           <div id="slide5" className="carousel-item relative w-full">
@@ -102,14 +71,6 @@ export default function BrandStory() {
                 <ArrowRightCircleIcon className="h-6 w-6 ml-1 group-hover:ml-2 ease-in duration-100 delay-0" />
               </label>
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide4" className="btn btn-circle">
-                ❮
-              </a>
-              <a href="#slide6" className="btn btn-circle">
-                ❯
-              </a>
-            </div>
           </div>
           <div id="slide6" className="carousel-item relative w-full">
             <div className="bg-pic-900 mb-0 h-[350px] w-full flex flex-col justify-center items-center rounded-md shadow-md shadow-brown-400">
@@ -122,16 +83,8 @@ export default function BrandStory() {
                 <ArrowRightCircleIcon className="h-6 w-6 ml-1 group-hover:ml-2 ease-in duration-100 delay-0" />
               </label>
             </div>
-            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-              <a href="#slide5" className="btn btn-circle">
-                ❮
-              </a>
-              <a href="#slide1" className="btn btn-circle">
-                ❯
-              </a>
-            </div>
           </div>
-        </div>
+        </Carousel>
       </div>
       {/* modal sejarah */}
       <input type="checkbox" id="sejarah" className="modal-toggle" />
