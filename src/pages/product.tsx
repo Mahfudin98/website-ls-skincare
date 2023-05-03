@@ -10,8 +10,10 @@ import Breadcrumb from "@/components/Widget/breadcrumb";
 import { useEffect, useState, Key } from "react";
 import axios from "axios";
 import { NumericFormat } from "react-number-format";
+import LoadingPage from "@/components/Widget/loading";
 export default function Product() {
   const [products, setProducts] = useState([]);
+  const [show, setShow] = useState(true);
   useEffect(() => {
     axios
       .get(`https://api-report.lsskincare.id/api/product-list-customer`, {
@@ -21,10 +23,12 @@ export default function Product() {
         }
       })
       .then((response) => {
+        if (response.data.data.length > 0) {
+          setShow(false);
+        }
         return setProducts(response.data.data);
       });
-  }, [setProducts]);
-
+  }, [setProducts, setShow]);
   return (
     <Layout pageTitle="Product">
       <Breadcrumb title="Product" navigate="product" />
@@ -34,6 +38,7 @@ export default function Product() {
             <h1>Our Product</h1>
           </div>
         </div>
+        <LoadingPage show={show} />
         <div className="grid grid-cols-12 gap-6 px-2 md:px-6">
           {/* products list */}
           {products.map(

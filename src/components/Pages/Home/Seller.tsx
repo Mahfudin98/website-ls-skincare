@@ -11,9 +11,11 @@ import {
   useEffect,
   useState
 } from "react";
+import LoadingPage from "@/components/Widget/loading";
 
 export default function SellerHome() {
   const [members, setMembers] = useState([]);
+  const [show, setShow] = useState(true);
   useEffect(() => {
     axios
       .get(`https://api-report.lsskincare.id/api/member-list-guest`, {
@@ -23,9 +25,12 @@ export default function SellerHome() {
         }
       })
       .then((response) => {
+        if (response.data.data.length > 0) {
+          setShow(false);
+        }
         return setMembers(response.data.data);
       });
-  }, [setMembers]);
+  }, [setMembers, setShow]);
 
   return (
     <section className={styles["section-def"]}>
@@ -71,6 +76,7 @@ export default function SellerHome() {
                 </button>
               </div>
             </div>
+            <LoadingPage show={show} />
             <div className="h-[425px] p-4 relative overflow-y-auto">
               {/* list agen reseller */}
               {members.map(

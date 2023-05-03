@@ -8,9 +8,11 @@ import Link from "next/link";
 import { useEffect, useState, Key } from "react";
 import axios from "axios";
 import { NumericFormat } from "react-number-format";
+import LoadingPage from "@/components/Widget/loading";
 
 export default function ProductHome() {
   const [products, setProducts] = useState([]);
+  const [show, setShow] = useState(true);
   useEffect(() => {
     axios
       .get(`https://api-report.lsskincare.id/api/top-product-customer`, {
@@ -20,9 +22,12 @@ export default function ProductHome() {
         }
       })
       .then((response) => {
+        if (response.data.length > 0) {
+          setShow(false);
+        }
         return setProducts(response.data);
       });
-  }, [setProducts]);
+  }, [setProducts, setShow]);
 
   return (
     <section className={styles["section-def"]}>
@@ -39,6 +44,7 @@ export default function ProductHome() {
           </h3>
         </Link>
       </div>
+      <LoadingPage show={show} />
       <div className="grid grid-cols-12 gap-6 px-2 md:px-6">
         {/* products list */}
         {products
