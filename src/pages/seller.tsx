@@ -38,11 +38,6 @@ export default function Seller() {
     <Layout pageTitle="Seller">
       <Breadcrumb title="Seller" navigate="seller" />
       <section className="container p-2 mx-auto">
-        <div className="w-full inline-flex justify-between items-center mb-3">
-          <div>
-            <h1>Our Seller</h1>
-          </div>
-        </div>
         <div className="flex flex-wrap border border-pic-100 rounded-md shadow-lg relative overflow-hidden mb-8">
           <div className="w-full lg:w-1/2">
             <div className="text-center h-full flex items-center justify-center w-full text-5xl font-bold bg-pic-900">

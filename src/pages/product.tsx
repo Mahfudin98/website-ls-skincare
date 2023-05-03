@@ -33,11 +33,6 @@ export default function Product() {
     <Layout pageTitle="Product">
       <Breadcrumb title="Product" navigate="product" />
       <section className={`${styles["section-def"]}`}>
-        <div className="w-full inline-flex justify-between items-center mb-3">
-          <div>
-            <h1>Our Product</h1>
-          </div>
-        </div>
         <LoadingPage show={show} />
         <div className="grid grid-cols-12 gap-6 px-2 md:px-6">
           {/* products list */}
