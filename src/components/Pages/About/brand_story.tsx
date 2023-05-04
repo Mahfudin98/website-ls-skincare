@@ -234,23 +234,24 @@ export default function BrandStory() {
       <input type="checkbox" id="target" className="modal-toggle" />
       <label htmlFor="target" className="cursor-pointer modal">
         <label
-          className="relative w-11/12 max-w-5xl modal-box bg-pic-900"
+          className="relative w-11/12 max-w-xl modal-box bg-pic-200"
           htmlFor=""
         >
-          <h3 className="text-lg font-bold text-white">Target LS Skincare</h3>
+          <h3 className="text-lg font-bold text-brown-900">
+            Target LS Skincare
+          </h3>
           <label
             htmlFor="target"
             className="absolute btn btn-sm btn-circle right-2 top-2"
           >
             ✕
           </label>
-          <article className="py-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            omnis, saepe facere nesciunt modi ipsa autem obcaecati, alias vel
-            facilis commodi, veniam possimus praesentium. Velit maiores libero
-            quasi eius praesentium quae animi eos expedita hic vitae fugiat nam
-            minima ab, mollitia iste, quia ut natus unde dolore et similique!
-            Ex!
+          <article className="py-4 leading-relaxed text-justify text-brown-700">
+            <p className="indent-8">
+              Target penjualan dari LS SKINCARE yaitu seluruh perempuan
+              Indonesia dengan rentang usia dari 17th-50 thn dan yang baru akan
+              memakai skincare cocok menggunakan produk ini.
+            </p>
           </article>
         </label>
       </label>
@@ -258,23 +259,41 @@ export default function BrandStory() {
       <input type="checkbox" id="produk" className="modal-toggle" />
       <label htmlFor="produk" className="cursor-pointer modal">
         <label
-          className="relative w-11/12 max-w-5xl modal-box bg-pic-900"
+          className="relative w-11/12 max-w-5xl modal-box bg-pic-200"
           htmlFor=""
         >
-          <h3 className="text-lg font-bold text-white">Produk LS Skincare</h3>
+          <h3 className="text-lg font-bold uppercase text-brown-900">
+            Produk LS Skincare
+          </h3>
           <label
             htmlFor="produk"
             className="absolute btn btn-sm btn-circle right-2 top-2"
           >
             ✕
           </label>
-          <article className="py-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            omnis, saepe facere nesciunt modi ipsa autem obcaecati, alias vel
-            facilis commodi, veniam possimus praesentium. Velit maiores libero
-            quasi eius praesentium quae animi eos expedita hic vitae fugiat nam
-            minima ab, mollitia iste, quia ut natus unde dolore et similique!
-            Ex!
+          <article className="py-4 leading-relaxed text-justify text-brown-700">
+            <p className="mb-2 indent-8">
+              Produk LS SKINCARE bisa membantu meng-Glowingkan hanya dalam 3
+              hari dan semua produknya sudah terverifikasi BPOM aman juga untuk
+              ibu hamil, menyusui dan tidak membuat ketrgantungan,ada jaminan
+              garansi uang kembali 100%. disetiap pembelian min 1 paket produk
+              LS SKINCARE bisa langsung mendapatkan Gratis Pouch kosmetik
+              cantik, Gratis Gift menarik, diskon sampai dengan 30% dan Subsidi
+              Ongkir. Selain itu juga untuk reseller dan agen nya sudah tersebar
+              di seuruh wilayah indonesia.
+            </p>
+            <ul className="ml-4 list-disc list-outside">
+              <li>
+                <h3 className="mb-2 text-lg font-semibold uppercase font-poppins text-brown-900">
+                  PRODUK AMAN DAN HALAL
+                </h3>
+                <p>
+                  Semua produk LS SKINCARE menggunakan bahan-bahan berkualitas
+                  dan tidak bertentangan dengan kaedah-kaedah medis sehingga
+                  aman dan terpercaya.
+                </p>
+              </li>
+            </ul>
           </article>
         </label>
       </label>
@@ -306,10 +325,10 @@ export default function BrandStory() {
       <input type="checkbox" id="kesuksesan" className="modal-toggle" />
       <label htmlFor="kesuksesan" className="cursor-pointer modal">
         <label
-          className="relative w-11/12 max-w-5xl modal-box bg-pic-900"
+          className="relative w-11/12 max-w-2xl modal-box bg-pic-200"
           htmlFor=""
         >
-          <h3 className="text-lg font-bold text-white">
+          <h3 className="text-lg font-bold uppercase text-brown-900">
             Kesuksesan LS Skincare
           </h3>
           <label
@@ -318,13 +337,14 @@ export default function BrandStory() {
           >
             ✕
           </label>
-          <article className="py-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-            omnis, saepe facere nesciunt modi ipsa autem obcaecati, alias vel
-            facilis commodi, veniam possimus praesentium. Velit maiores libero
-            quasi eius praesentium quae animi eos expedita hic vitae fugiat nam
-            minima ab, mollitia iste, quia ut natus unde dolore et similique!
-            Ex!
+          <article className="py-4 leading-relaxed text-justify text-brown-700">
+            <p className="indent-8">
+              Pada tahun 2021 LS SKINCARE meraih penghargaan sebagai Top brand
+              dan The best produk skincare selain itu juga mendapatkan peringkat
+              teratas dalam kategori perawatan kulit di salah satu marketplace
+              dan penjualan terbanyak sebesar 60rb paket setiap bulannya di
+              seluruh marketplace.
+            </p>
           </article>
         </label>
       </label>
