@@ -30,7 +30,7 @@ export default function Galeri() {
                 height={720}
                 width={1280}
                 alt="image1"
-                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105"
+                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105 transition hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
               />
             </div>
             <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-3">
@@ -39,7 +39,7 @@ export default function Galeri() {
                 height={720}
                 width={1280}
                 alt="image1"
-                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105"
+                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105 transition hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
               />
             </div>
             <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden">
@@ -48,16 +48,72 @@ export default function Galeri() {
                 height={720}
                 width={1280}
                 alt="image1"
-                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105"
+                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105 transition hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
               />
             </div>
-            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden"></div>
-            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden"></div>
-            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-2"></div>
-            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-4"></div>
-            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden"></div>
-            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-3"></div>
-            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-3"></div>
+            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden">
+              <Image
+                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                height={720}
+                width={1280}
+                alt="image1"
+                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105 transition hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+              />
+            </div>
+            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden">
+              <Image
+                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                height={720}
+                width={1280}
+                alt="image1"
+                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105 transition hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+              />
+            </div>
+            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-2">
+              <Image
+                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                height={720}
+                width={1280}
+                alt="image1"
+                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105 transition hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+              />
+            </div>
+            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-4">
+              <Image
+                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                height={720}
+                width={1280}
+                alt="image1"
+                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105 transition hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+              />
+            </div>
+            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden">
+              <Image
+                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                height={720}
+                width={1280}
+                alt="image1"
+                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105 transition hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+              />
+            </div>
+            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-3">
+              <Image
+                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                height={720}
+                width={1280}
+                alt="image1"
+                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105 transition hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+              />
+            </div>
+            <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-3">
+              <Image
+                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                height={720}
+                width={1280}
+                alt="image1"
+                className="object-cover h-32 duration-300 ease-in-out delay-75 hover:scale-105 transition hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none"
+              />
+            </div>
           </div>
         </label>
       </label>
