@@ -53,7 +53,7 @@ export default function Galeri() {
             </div>
             <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden">
               <Image
-                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                src="https://lh3.googleusercontent.com/d/1ZBUx9vipd5YXBKUrth_ZbGZSIIMHuDft?authuser=0"
                 height={720}
                 width={1280}
                 alt="image1"
@@ -62,7 +62,7 @@ export default function Galeri() {
             </div>
             <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden">
               <Image
-                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                src="https://lh3.googleusercontent.com/d/18ge2gvakS60-U4_8rE54ecIk6sVCDIeJ?authuser=0"
                 height={720}
                 width={1280}
                 alt="image1"
@@ -71,7 +71,7 @@ export default function Galeri() {
             </div>
             <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-2">
               <Image
-                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                src="https://lh3.googleusercontent.com/d/1QAOrotuw_pG8aRVJehuGNqgSFJ3ry5H0?authuser=0"
                 height={720}
                 width={1280}
                 alt="image1"
@@ -80,7 +80,7 @@ export default function Galeri() {
             </div>
             <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-4">
               <Image
-                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                src="https://lh3.googleusercontent.com/d/1clcwscoiGZrnz1USTihfmJRpAI0SCwbm?authuser=0"
                 height={720}
                 width={1280}
                 alt="image1"
@@ -89,7 +89,7 @@ export default function Galeri() {
             </div>
             <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden">
               <Image
-                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                src="https://lh3.googleusercontent.com/d/11ayICMf3S-w9nZOGPANIF3n166fp9yO1?authuser=0"
                 height={720}
                 width={1280}
                 alt="image1"
@@ -98,7 +98,7 @@ export default function Galeri() {
             </div>
             <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-3">
               <Image
-                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                src="https://lh3.googleusercontent.com/d/1xtLL2ae3cFNYOPb-d_7bnZsxjm0l5LmQ?authuser=0"
                 height={720}
                 width={1280}
                 alt="image1"
@@ -107,7 +107,7 @@ export default function Galeri() {
             </div>
             <div className="h-32 w-full bg-pic-500 aspect-[4/3] md:aspect-[3/4] xl:aspect-[4/3] rounded-lg relative overflow-hidden md:col-start-3">
               <Image
-                src="https://lh3.googleusercontent.com/d/1B4m8J7CblwSkHx1yVyrpPSsrIKGdrcJg?authuser=0"
+                src="https://lh3.googleusercontent.com/d/1ZrZ_qRZ_nc09AK1gfHM6e60-zM5na2To?authuser=0"
                 height={720}
                 width={1280}
                 alt="image1"
