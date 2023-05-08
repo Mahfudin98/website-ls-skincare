@@ -125,12 +125,6 @@ export default function MapsList() {
                             </span>
                           </p>
                           <p className="text-sm font-normal text-brown-700">
-                            Address :{" "}
-                            <span className="text-base font-medium text-brown-900">
-                              {member.alamat_member}
-                            </span>
-                          </p>
-                          <p className="text-sm font-normal text-brown-700">
                             Full Adress :{" "}
                             <span className="text-base font-medium text-brown-900">
                               {member.alamat_member.replaceAll("=", ":")}
