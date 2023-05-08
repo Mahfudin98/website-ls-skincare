@@ -93,33 +93,6 @@ export default function MapsList() {
                     | ReactPortal
                     | null
                     | undefined;
-                  province_id:
-                    | string
-                    | number
-                    | boolean
-                    | ReactElement<any, string | JSXElementConstructor<any>>
-                    | ReactFragment
-                    | ReactPortal
-                    | null
-                    | undefined;
-                  city_id:
-                    | string
-                    | number
-                    | boolean
-                    | ReactElement<any, string | JSXElementConstructor<any>>
-                    | ReactFragment
-                    | ReactPortal
-                    | null
-                    | undefined;
-                  district_id:
-                    | string
-                    | number
-                    | boolean
-                    | ReactElement<any, string | JSXElementConstructor<any>>
-                    | ReactFragment
-                    | ReactPortal
-                    | null
-                    | undefined;
                   alamat_member: string;
                 }) => {
                   return (
@@ -154,8 +127,7 @@ export default function MapsList() {
                           <p className="text-sm font-normal text-brown-700">
                             Address :{" "}
                             <span className="text-base font-medium text-brown-900">
-                              {member.province_id}, {member.city_id},{" "}
-                              {member.district_id}
+                              {member.alamat_member}
                             </span>
                           </p>
                           <p className="text-sm font-normal text-brown-700">
