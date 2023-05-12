@@ -18,10 +18,10 @@ import { NextApiRequest, NextApiResponse } from "next/types";
 
 export default function ChatForm() {
   const [username, setUsername] = useState("");
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<string[]>([]);
   const [message, setMessage] = useState("");
 
-  let allMessages = [];
+  let allMessages: string[] = [];
   useEffect(() => {
     // Pusher.logToConsole = true;
     const pusher = new Pusher("141b4b997017d20aaed4", {
