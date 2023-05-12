@@ -40,7 +40,7 @@ export default function ChatForm() {
     formData.append("username", username);
     formData.append("message", message);
     let result = await axios.get(
-      `http://localhost:8000/api/message?username=${username}&message=${message}`,
+      `https://api-report.lsskincare.id/api/message?username=${username}&message=${message}`,
       // formData,
       {
         headers: {
