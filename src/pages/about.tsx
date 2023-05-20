@@ -3,10 +3,14 @@ import BrandList from "@/components/Pages/About/brand_list";
 import BrandStory from "@/components/Pages/About/brand_story";
 import Breadcrumb from "@/components/Widget/breadcrumb";
 import Layout from "@/components/layout";
+import Head from "next/head";
 
 export default function About() {
   return (
-    <Layout pageTitle="About">
+    <Layout>
+      <Head>
+        <title> LS Skincare - About </title>
+      </Head>
       <Breadcrumb title="About" navigate="about" />
       {/* story section */}
       <BrandStory />

@@ -11,8 +11,10 @@ export default function ChatBubble() {
   const [showChat, setShowChat] = useState(false);
   const toogleChat = () => setShowChat(!showChat);
   return (
-    <div className="fixed bottom-5 right-5 z-[99991]">
-      <div className="relative flex justify-end w-[400px]">
+    <div className="fixed bottom-5 right-5 z-[991]">
+      <div
+        className={`relative flex justify-end w-[400px] !showChat ? "scale-0" : "scale-100"`}
+      >
         <div
           className={`mb-20 -mr-16 shadow-md rounded-lg w-full transform transition-transform ease-in-out duration-300 delay-100 origin-bottom-right ${
             !showChat ? "scale-0" : "scale-100"

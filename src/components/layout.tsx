@@ -6,15 +6,13 @@ import ChatBubble from "./Widget/Chat/chat_buble";
 
 interface LayoutProps {
   children: ReactNode;
-  pageTitle: string;
 }
 
 export default function Layout(props: LayoutProps) {
-  const { children, pageTitle } = props;
+  const { children } = props;
   return (
     <>
       <Head>
-        <title> LS Skincare - {pageTitle} </title>
         <meta
           name="description"
           content="LS Skincare adalah sebuah brand skincare asal Majalengka"
@@ -25,7 +23,7 @@ export default function Layout(props: LayoutProps) {
         <HeaderCustom />
         <main className="container px-4 mx-auto">{children}</main>
         {/* chat bubble */}
-        <ChatBubble />
+        {/* <ChatBubble /> */}
         <FooterCustom />
       </main>
     </>

@@ -11,6 +11,7 @@ import { useEffect, useState, Key } from "react";
 import axios from "axios";
 import { NumericFormat } from "react-number-format";
 import LoadingPage from "@/components/Widget/loading";
+import Head from "next/head";
 export default function Product() {
   const [products, setProducts] = useState([]);
   const [show, setShow] = useState(true);
@@ -30,7 +31,10 @@ export default function Product() {
       });
   }, [setProducts, setShow]);
   return (
-    <Layout pageTitle="Product">
+    <Layout>
+      <Head>
+        <title> LS Skincare - Product </title>
+      </Head>
       <Breadcrumb title="Product" navigate="product" />
       <section className={`${styles["section-def"]}`}>
         <LoadingPage show={show} />
