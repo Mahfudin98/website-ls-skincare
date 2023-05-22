@@ -2,7 +2,8 @@ import styles from "./footer.module.css";
 import Image from "next/image";
 import {
   RectangleGroupIcon,
-  QuestionMarkCircleIcon
+  QuestionMarkCircleIcon,
+  MapPinIcon
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
@@ -61,6 +62,17 @@ export default function FooterCustom() {
               <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />
             </div>
             <ul className="">
+              <li className="mb-1">
+                <div className={`${styles["nav-li"]} group`}>
+                  <div>
+                    <MapPinIcon className="w-5 h-5 mr-1" />
+                  </div>
+                  <p className="leading-relaxed text-justify">
+                    Jl. Desa Tenjolayar No.23, Tenjolayar, Kec. Cigasong,
+                    Kabupaten Majalengka, Jawa Barat 45476
+                  </p>
+                </div>
+              </li>
               <li className="mb-1">
                 <a href="#" className={`${styles["nav-li"]} group`}>
                   <Image

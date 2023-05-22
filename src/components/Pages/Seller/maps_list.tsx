@@ -1,35 +1,17 @@
 import { Accordion } from "flowbite-react";
-import axios from "axios";
-import {
-  JSXElementConstructor,
-  Key,
-  ReactElement,
-  ReactFragment,
-  ReactPortal,
-  useEffect,
-  useState
-} from "react";
+import { useEffect, useState } from "react";
 import LoadingPage from "@/components/Widget/loading";
 import MagnifyingGlassIcon from "@heroicons/react/24/outline/MagnifyingGlassIcon";
+import { useSellerData } from "@/store/seller_data";
 
 export default function MapsList() {
-  const [members, setMembers] = useState([]);
+  const { seller } = useSellerData();
   const [show, setShow] = useState(true);
   useEffect(() => {
-    axios
-      .get(`https://api-report.lsskincare.id/api/member-list-guest`, {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        }
-      })
-      .then((response) => {
-        if (response.data.data.length > 0) {
-          setShow(false);
-        }
-        return setMembers(response.data.data);
-      });
-  }, [setMembers, setShow]);
+    if (seller?.length > 0) {
+      setShow(false);
+    }
+  }, [seller, setShow]);
   return (
     <section className="container p-2 mx-auto mt-5">
       <div className="flex flex-wrap border border-pic-100 rounded-md shadow-lg relative overflow-hidden mb-8">
@@ -72,82 +54,59 @@ export default function MapsList() {
             <div className="h-[425px] p-4 relative overflow-y-auto">
               <LoadingPage show={show} />
               {/* list agen reseller */}
-              {members.map(
-                (member: {
-                  member_id: Key | null | undefined;
-                  nama_member:
-                    | string
-                    | number
-                    | boolean
-                    | ReactElement<any, string | JSXElementConstructor<any>>
-                    | ReactFragment
-                    | null
-                    | undefined;
-                  member_type: string;
-                  phone_member:
-                    | string
-                    | number
-                    | boolean
-                    | ReactElement<any, string | JSXElementConstructor<any>>
-                    | ReactFragment
-                    | ReactPortal
-                    | null
-                    | undefined;
-                  alamat_member: string;
-                }) => {
-                  return (
-                    <Accordion
-                      key={member.member_id}
-                      flush={true}
-                      alwaysOpen={true}
-                      collapseAll={true}
-                    >
-                      <Accordion.Panel>
-                        <Accordion.Title>
-                          <span className="uppercase text-base font-bold text-brown-900 text-start">
-                            {member.nama_member}
-                            <span className="block text-xs font-normal text-brown-600">
-                              {member.member_type != "1" ? "Reseller" : "Agen"}
-                            </span>
+              {seller?.map((member: any) => {
+                return (
+                  <Accordion
+                    key={member.member_id}
+                    flush={true}
+                    alwaysOpen={true}
+                    collapseAll={true}
+                  >
+                    <Accordion.Panel>
+                      <Accordion.Title>
+                        <span className="uppercase text-base font-bold text-brown-900 text-start">
+                          {member.nama_member}
+                          <span className="block text-xs font-normal text-brown-600">
+                            {member.member_type != "1" ? "Reseller" : "Agen"}
                           </span>
-                        </Accordion.Title>
-                        <Accordion.Content>
-                          <p className="text-sm font-normal text-brown-700">
-                            Full Name :{" "}
-                            <span className="text-base font-medium text-brown-900 capitalize">
-                              {member.nama_member}
-                            </span>
-                          </p>
-                          <p className="text-sm font-normal text-brown-700">
-                            Phone :{" "}
-                            <span className="text-base font-medium text-brown-900">
-                              {member.phone_member}
-                            </span>
-                          </p>
-                          <p className="text-sm font-normal text-brown-700">
-                            Full Adress :{" "}
-                            <span className="text-base font-medium text-brown-900">
-                              {member.alamat_member.replaceAll("=", ":")}
-                            </span>
-                          </p>
-                          <p className="text-sm font-normal text-brown-700">
-                            Member Type :{" "}
-                            <span className="text-base font-medium text-brown-900">
-                              {member.member_type != "1" ? "Reseller" : "Agen"}
-                            </span>
-                          </p>
-                          <p className="text-sm font-normal text-brown-700">
-                            Status :{" "}
-                            <span className="text-base font-medium text-brown-900">
-                              {member.member_type != "0" ? "Nonaktif" : "Aktif"}
-                            </span>
-                          </p>
-                        </Accordion.Content>
-                      </Accordion.Panel>
-                    </Accordion>
-                  );
-                }
-              )}
+                        </span>
+                      </Accordion.Title>
+                      <Accordion.Content>
+                        <p className="text-sm font-normal text-brown-700">
+                          Full Name :{" "}
+                          <span className="text-base font-medium text-brown-900 capitalize">
+                            {member.nama_member}
+                          </span>
+                        </p>
+                        <p className="text-sm font-normal text-brown-700">
+                          Phone :{" "}
+                          <span className="text-base font-medium text-brown-900">
+                            {member.phone_member}
+                          </span>
+                        </p>
+                        <p className="text-sm font-normal text-brown-700">
+                          Full Adress :{" "}
+                          <span className="text-base font-medium text-brown-900">
+                            {member.alamat_member.replaceAll("=", ":")}
+                          </span>
+                        </p>
+                        <p className="text-sm font-normal text-brown-700">
+                          Member Type :{" "}
+                          <span className="text-base font-medium text-brown-900">
+                            {member.member_type != "1" ? "Reseller" : "Agen"}
+                          </span>
+                        </p>
+                        <p className="text-sm font-normal text-brown-700">
+                          Status :{" "}
+                          <span className="text-base font-medium text-brown-900">
+                            {member.member_type != "0" ? "Nonaktif" : "Aktif"}
+                          </span>
+                        </p>
+                      </Accordion.Content>
+                    </Accordion.Panel>
+                  </Accordion>
+                );
+              })}
             </div>
           </div>
         </div>
