@@ -1,8 +1,8 @@
 import Head from "next/head";
-import HeaderCustom from "./Header/header";
-import FooterCustom from "./Footer/footer";
+import HeaderCustom from "../Header/header";
+import FooterCustom from "../Footer/footer";
 import { ReactNode } from "react";
-import ChatBubble from "./Widget/Chat/chat_buble";
+// import ChatBubble from "../Widget/Chat/chat_buble";
 
 interface LayoutProps {
   children: ReactNode;

@@ -1,5 +1,5 @@
 import Breadcrumb from "@/components/Widget/breadcrumb";
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout/layout";
 import { ArrowRightCircleIcon } from "@heroicons/react/24/outline";
 import styles from "../components/Pages/Home/home.module.css";
 import Galeri from "@/components/Pages/Media/galeri";

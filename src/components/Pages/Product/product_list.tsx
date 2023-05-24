@@ -1,14 +1,45 @@
 import LoadingPage from "@/components/Widget/loading";
 import { useProductData } from "@/store/product_data";
-import { ShoppingCartIcon } from "@heroicons/react/24/outline";
-import { useEffect, useState } from "react";
+import {
+  ChevronRightIcon,
+  ChevronUpIcon,
+  HomeIcon,
+  ShoppingCartIcon,
+  StarIcon
+} from "@heroicons/react/24/outline";
+import { Fragment, useEffect, useState } from "react";
 import { NumericFormat } from "react-number-format";
 import Image from "next/image";
 import styles from "@/components/Pages/Home/home.module.css";
+import { Dialog, Transition, Disclosure } from "@headlessui/react";
+import ModalProduct from "./modal_product";
 
 export default function ProductList() {
   const { product } = useProductData();
   const [show, setShow] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
+  const [detail, setDetail] = useState({
+    code_produk: new String(),
+    nama_produk: new String(),
+    stock: new String(),
+    image: new String(),
+    harga_agen: new String(),
+    harga_reseller: new String(),
+    harga_end_user: new String(),
+    category_name: new String(),
+    category_pay: new String(),
+    type: new String()
+  });
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal(data: any) {
+    setIsOpen(true);
+    setDetail(data);
+  }
+
   useEffect(() => {
     if (product?.length > 0) {
       setShow(false);
@@ -17,33 +48,27 @@ export default function ProductList() {
   return (
     <section className={`${styles["section-def"]}`}>
       <LoadingPage show={show} />
-      <div className="grid grid-cols-12 gap-6 px-2 md:px-6">
+      <div className="grid grid-cols-12 gap-6">
         {/* products list */}
         {product?.map((product: any) => {
           return (
             <div
               key={product.code_produk}
+              onClick={() => openModal(product)}
               className="col-span-12 md:col-span-6 lg:col-span-4 2xl:col-span-3"
             >
-              <article className="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 ">
+              <article className="rounded-xl bg-white p-3 shadow-lg hover:shadow-xl hover:transform hover:scale-105 duration-300 border">
                 <a href="#">
-                  <div className="relative flex items-end overflow-hidden rounded-xl">
+                  <div className="relative flex overflow-hidden rounded-xl h-[350px] bg-pic-600 justify-center items-center">
                     <Image
                       src={`${product.image}`}
                       width={1080}
                       height={1080}
-                      className="object-cover w-full bg-pic-600"
+                      className="object-cover h-full"
                       alt={`${product.nama_produk}`}
                     />
                     <div className="absolute bottom-3 left-3 inline-flex items-center rounded-lg bg-white p-2 shadow-md">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 text-yellow-400"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
+                      <StarIcon className="h-5 w-5 text-yellow-400 fill-yellow-400" />
                       <span className="ml-1 text-sm text-slate-400">4.9</span>
                     </div>
                   </div>
@@ -79,6 +104,13 @@ export default function ProductList() {
           );
         })}
       </div>
+
+      <ModalProduct
+        isOpen={isOpen}
+        openModal={openModal}
+        closeModal={closeModal}
+        detail={detail}
+      />
     </section>
   );
 }

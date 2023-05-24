@@ -1,4 +1,4 @@
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout/layout";
 import HeadlineHome from "@/components/Pages/Home/Headline";
 import AboutHome from "@/components/Pages/Home/About";
 import ProductHome from "@/components/Pages/Home/Product";

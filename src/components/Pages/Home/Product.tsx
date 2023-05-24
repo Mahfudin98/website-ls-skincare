@@ -9,10 +9,33 @@ import { Key, useEffect, useState } from "react";
 import { NumericFormat } from "react-number-format";
 import LoadingPage from "@/components/Widget/loading";
 import { useProductData } from "@/store/product_data";
+import ModalProduct from "../Product/modal_product";
 
 export default function ProductHome() {
   const { topProduct } = useProductData();
   const [show, setShow] = useState(true);
+  let [isOpen, setIsOpen] = useState(false);
+  const [detail, setDetail] = useState({
+    code_produk: new String(),
+    nama_produk: new String(),
+    stock: new String(),
+    image: new String(),
+    harga_agen: new String(),
+    harga_reseller: new String(),
+    harga_end_user: new String(),
+    category_name: new String(),
+    category_pay: new String(),
+    type: new String()
+  });
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal(data: any) {
+    setIsOpen(true);
+    setDetail(data);
+  }
   useEffect(() => {
     if (topProduct?.length > 0) {
       setShow(false);
@@ -35,24 +58,25 @@ export default function ProductHome() {
         </Link>
       </div>
       <LoadingPage show={show} />
-      <div className="grid grid-cols-12 gap-6 px-2 md:px-6">
+      <div className="grid grid-cols-12 gap-6 px-2 md:px-4">
         {/* products list */}
         {topProduct
-          ?.filter((x: any, y: number) => y < 3)
+          ?.filter((x: any, y: number) => y < 4)
           .map((product: any, index: Key | null | undefined) => {
             return (
               <div
                 key={index}
-                className="col-span-12 md:col-span-6 lg:col-span-4"
+                onClick={() => openModal(product)}
+                className="col-span-12 md:col-span-6 lg:col-span-3"
               >
-                <article className="p-3 duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl hover:transform hover:scale-105 ">
+                <article className="p-3 duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl hover:transform hover:scale-105 border">
                   <a href="#">
-                    <div className="relative flex items-end overflow-hidden rounded-xl">
+                    <div className="relative flex items-center justify-center h-[350px] bg-pic-600 overflow-hidden rounded-xl">
                       <Image
                         src={`${product.image}`}
                         width={1080}
                         height={1080}
-                        className="object-cover w-full bg-pic-600"
+                        className="object-cover h-full"
                         alt={`${product.nama_produk}`}
                       />
                       <div className="absolute inline-flex items-center p-2 bg-white rounded-lg shadow-md bottom-3 left-3">
@@ -112,6 +136,12 @@ export default function ProductHome() {
           </Link>
         </div>
       </div>
+      <ModalProduct
+        isOpen={isOpen}
+        openModal={openModal}
+        closeModal={closeModal}
+        detail={detail}
+      />
     </section>
   );
 }
