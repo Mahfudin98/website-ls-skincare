@@ -6,7 +6,8 @@ const nextConfig = {
     domains: [
       "lh3.googleusercontent.com",
       "api-report.lsskincare.id",
-      "images.unsplash.com"
+      "images.unsplash.com",
+      "ui-avatars.com"
     ],
     formats: ["image/avif", "image/webp"]
   },
