@@ -20,7 +20,7 @@ export default function CardBiodata() {
     website: ""
   });
   useEffect(() => {
-    if (sellerDetail != undefined) {
+    if (sellerDetail) {
       setSeller(sellerDetail);
     }
   }, [sellerDetail]);
@@ -30,7 +30,7 @@ export default function CardBiodata() {
         <div className="w-44 h-44 mb-3 rounded-full bg-pic-900 flex justify-center items-center">
           <Image
             src={
-              seller
+              seller.image_member != ""
                 ? seller.image_member != null
                   ? seller.image_member
                   : `https://ui-avatars.com/api/?name=${seller.member_name}&background=random&size=350`

@@ -5,7 +5,8 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
     "./src/app/**/*.{js,ts,jsx,tsx}",
     "./public/**/*.html",
-    "./node_modules/flowbite-react/**/*.js"
+    "./node_modules/flowbite-react/**/*.js",
+    "./node_modules/react-tailwindcss-datepicker/dist/index.esm.js"
   ],
   theme: {
     fontFamily: {

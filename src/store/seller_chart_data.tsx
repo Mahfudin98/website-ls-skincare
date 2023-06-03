@@ -5,7 +5,7 @@ import useSWR from "swr";
 export const useSellerChartData = () => {
   const [barData, setBarData] = useState([]);
   const [lineData, setLineData] = useState([]);
-  const [point, setPointData] = useState("");
+  const [pointData, setPointData] = useState("");
   const csrf = () => $axios.get("/sanctum/csrf-cookie");
   const sellerBar = async ({
     idMember,
@@ -73,8 +73,8 @@ export const useSellerChartData = () => {
         if (error.response.status !== 409) throw error;
       });
 
-    return point;
+    return pointData;
   };
 
-  return { sellerBar, barData, sellerLine, lineData, sellerPoint, point };
+  return { sellerBar, barData, sellerLine, lineData, sellerPoint, pointData };
 };

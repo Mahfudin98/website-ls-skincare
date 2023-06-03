@@ -5,7 +5,7 @@ import moment from "moment";
 import { useSellerChartData } from "@/store/seller_chart_data";
 import { useSellerData } from "@/store/seller_data";
 import { Label, Select } from "flowbite-react";
-
+import _ from "lodash";
 export default function CardLayout() {
   var years = moment().format("YYYY");
   var months = moment().format("MM");
@@ -78,11 +78,16 @@ export default function CardLayout() {
                     value={year}
                     onChange={(e) => setYear(e.target.value)}
                   >
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
+                    {_.range(
+                      2019,
+                      parseInt(moment().add(1, "years").format("Y"))
+                    ).map((y: any) => {
+                      return (
+                        <option key={y} value={y}>
+                          {y}
+                        </option>
+                      );
+                    })}
                   </Select>
                 </div>
               </div>
@@ -92,7 +97,7 @@ export default function CardLayout() {
         <CardAnalytic
           barData={barData}
           lineData={lineData}
-          sllerId={seller.member_id}
+          sellerId={seller.member_id}
           month={moment(month).format("MMMM")}
         />
       </div>
