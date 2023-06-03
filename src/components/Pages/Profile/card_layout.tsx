@@ -89,7 +89,12 @@ export default function CardLayout() {
             </div>
           </div>
         </div>
-        <CardAnalytic barData={barData} lineData={lineData} />
+        <CardAnalytic
+          barData={barData}
+          lineData={lineData}
+          sllerId={seller.member_id}
+          month={moment(month).format("MMMM")}
+        />
       </div>
     </section>
   );
