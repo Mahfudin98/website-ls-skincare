@@ -9,6 +9,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import { faker } from "@faker-js/faker";
+import moment from "moment";
 
 ChartJS.register(
   CategoryScale,
@@ -19,45 +20,52 @@ ChartJS.register(
   Legend
 );
 
-export const options = {
-  indexAxis: "y" as const,
-  elements: {
-    bar: {
-      borderWidth: 2
-    }
-  },
-  responsive: true,
-  maintainAspectRatio: false,
-  plugins: {
-    legend: {
-      position: "top" as const
+export default function BarChartHorizontal(props: any) {
+  const { dataBar } = props;
+  const options = {
+    indexAxis: "y" as const,
+    elements: {
+      bar: {
+        borderWidth: 2
+      }
     },
-    title: {
-      display: true,
-      text: "Chart.js Horizontal Bar Chart"
-    }
-  }
-};
-
-const labels = ["January", "February", "March", "April", "May", "June", "July"];
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: "Dataset 1",
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
-      borderColor: "rgb(255, 99, 132)",
-      backgroundColor: "rgba(255, 99, 132, 0.5)"
+    responsive: true,
+    maintainAspectRatio: false,
+    animations: {
+      tension: {
+        duration: 3000,
+        easting: "easeInOutQuint",
+        from: 0,
+        to: 0.5,
+        loop: false
+      }
     },
-    {
-      label: "Dataset 2",
-      data: labels.map(() => faker.number.int({ min: -1000, max: 1000 })),
-      borderColor: "rgb(53, 162, 235)",
-      backgroundColor: "rgba(53, 162, 235, 0.5)"
+    plugins: {
+      legend: {
+        position: "top" as const
+      },
+      title: {
+        display: true,
+        text: "Data pembelian pertahun"
+      }
     }
-  ]
-};
+  };
 
-export default function BarChartHorizontal() {
+  const labels = dataBar.map((label: any) => {
+    return moment(label.date).format("MMMM");
+  });
+  const data = {
+    labels,
+    datasets: [
+      {
+        label: "Pembelian",
+        data: dataBar.map((total: any) => {
+          return total.total;
+        }),
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)"
+      }
+    ]
+  };
   return <Bar options={options} data={data} />;
 }

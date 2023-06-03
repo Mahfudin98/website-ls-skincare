@@ -30,9 +30,11 @@ export default function CardBiodata() {
         <div className="w-44 h-44 mb-3 rounded-full bg-pic-900 flex justify-center items-center">
           <Image
             src={
-              seller.image_member != null
-                ? seller.image_member
-                : `https://ui-avatars.com/api/?name=${seller.member_name}&background=random&size=350`
+              seller
+                ? seller.image_member != null
+                  ? seller.image_member
+                  : `https://ui-avatars.com/api/?name=${seller.member_name}&background=random&size=350`
+                : `https://ui-avatars.com/api/?name=LS+Skincare&background=random&size=350`
             }
             className="w-40 h-40 object-cover rounded-full"
             height={1080}
