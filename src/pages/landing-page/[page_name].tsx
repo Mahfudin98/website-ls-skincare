@@ -11,7 +11,7 @@ export default function LandingPage() {
   return (
     <Layout>
       <Head>
-        <title> LS Skincare - landing Page</title>
+        <title> LS Skincare </title>
       </Head>
       <section className="container p-2 mx-auto my-5">
         <div className="w-full h-[250px] lg:h-[450px] bg-pic-900 rounded-2xl shadow-sm relative">
@@ -55,12 +55,27 @@ export default function LandingPage() {
           <div className="absolute flex justify-center w-full -bottom-6">
             <div className="flex items-center gap-2 px-4 py-3 bg-pic-100 w-fit rounded-xl">
               <h2 className="text-base font-semibold text-brown-900 font-poppins">
-                Made With
+                Terdaftar
               </h2>
-              <div className="grid grid-cols-3 gap-2">
-                <div className="w-8 h-8 rounded-full bg-brown-900"></div>
-                <div className="w-8 h-8 rounded-full bg-brown-900"></div>
-                <div className="w-8 h-8 rounded-full bg-brown-900"></div>
+              <div className="grid grid-cols-2 gap-2">
+                <div className="w-10 h-10 relative overflow-hidden flex justify-center items-center rounded-full ring-1 ring-pic-900">
+                  <Image
+                    width={1080}
+                    height={1080}
+                    className="w-8 h-8 object-cover"
+                    alt="..."
+                    src="/bpom.png"
+                  />
+                </div>
+                <div className="w-10 h-10 relative overflow-hidden flex justify-center items-center rounded-full ring-1 ring-pic-900">
+                  <Image
+                    width={1080}
+                    height={1080}
+                    className="w-8 h-8 object-cover"
+                    alt="..."
+                    src="/mui.png"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -81,7 +96,7 @@ export default function LandingPage() {
           <ArrowDownCircleIcon className="h-14 w-14 text-brown-900 animate-bounce transition ease-in-out mb-3" />
         </div>
         <div className="flex flex-wrap items-center w-full bg-pic-500 mb-5 mt-20 md:mt-0 rounded-md shadow-md relative">
-          <div className="absolute -top-20 md:top-0 md:bottom-0 md:h-full w-full flex justify-center">
+          <div className="absolute -top-20 md:top-0 md:bottom-0 md:h-full w-full flex justify-center z-10">
             <div className="w-[100px] h-[190px] md:h-full md:w-[120px] lg:w-[200px] flex justify-center items-center rounded-md">
               <Image
                 width={1080}
@@ -102,29 +117,31 @@ export default function LandingPage() {
                 dignissimos odit fugiat dolorum mollitia necessitatibus animi
                 aspernatur ipsam omnis quaerat.
               </article>
-              <button
-                type="button"
-                className="flex items-center py-1.5 px-3 bg-pic-900 rounded-lg text-base font-medium text-white shadow-md hover:bg-pic-800 focus:ring-1 focus:ring-white"
-              >
-                Shop Now
-                <ShoppingCartIcon className="h-6 w-6 ml-2" />
-              </button>
             </div>
           </div>
-          <div className="w-full md:w-1/2 bg-pic-900">
+          <div className="w-full h-full md:w-1/2 bg-pic-900 rounded-b-md md:rounded-b-none md:rounded-r-md relative overflow-hidden">
             <Image
               width={1080}
               height={1080}
               className="w-full h-full object-cover"
               alt="..."
-              src="https://lh3.googleusercontent.com/d/1e8O1w32zJ--vtpaF6bD5JdnsFUkw_s1f?authuser=0"
+              src="/model.png"
             />
+            <div className="absolute w-full h-full flex justify-center items-center top-12 md:top-14 -left-2 lg:top-24 lg:-left-6 2xl:top-28 2xl:-left-8 z-10">
+              <Image
+                width={1080}
+                height={1080}
+                className="w-16 lg:w-32 2xl:w-40"
+                alt="..."
+                src="/paket-series.png"
+              />
+            </div>
           </div>
         </div>
       </section>
       <section className="container p-2 mx-auto mb-2.5">
-        <div className="flex flex-wrap items-center bg-pic-100 rounded-sm shadow-md">
-          <div className="w-full md:w-1/2">
+        <div className="flex flex-wrap items-center bg-pic-100 rounded-lg shadow-md relative overflow-hidden">
+          <div className="w-full md:w-1/2 md:order-last">
             <div className="flex flex-col justify-center items-center p-8">
               <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold uppercase text-brown-900 font-poppins mb-3">
                 Special Offer
@@ -133,6 +150,12 @@ export default function LandingPage() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
                 expedita?
               </p>
+              <h3 className="text-xl font-bold text-brown-400 font-poppins mb-2 line-through">
+                Rp. 145.000
+              </h3>
+              <h3 className="text-3xl font-bold text-brown-900 font-poppins mb-5">
+                Rp. 125.000
+              </h3>
               <button
                 type="button"
                 className="flex items-center py-1.5 px-3 bg-pic-900 rounded-lg text-base md:text-lg lg:text-xl font-medium text-white shadow-md hover:bg-pic-800 focus:ring-1 focus:ring-white"
