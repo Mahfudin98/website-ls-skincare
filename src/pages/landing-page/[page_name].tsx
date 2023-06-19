@@ -1,4 +1,5 @@
 import Layout from "@/components/Layout/layout";
+import { useProductData } from "@/store/product_data";
 import {
   ArrowDownCircleIcon,
   ShoppingCartIcon
@@ -6,8 +7,15 @@ import {
 import { Carousel } from "flowbite-react";
 import Head from "next/head";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { NumericFormat } from "react-number-format";
 
 export default function LandingPage() {
+  const { product } = useProductData();
+  const produk = product?.filter((el: any) => {
+    return el.nama_produk === "PAKET NEW SERIES";
+  });
+
   return (
     <Layout>
       <Head>
@@ -150,12 +158,29 @@ export default function LandingPage() {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi,
                 expedita?
               </p>
-              <h3 className="text-xl font-bold text-brown-400 font-poppins mb-2 line-through">
-                Rp. 145.000
-              </h3>
-              <h3 className="text-3xl font-bold text-brown-900 font-poppins mb-5">
-                Rp. 125.000
-              </h3>
+              {produk?.map((p: any) => {
+                return (
+                  <div
+                    key={p}
+                    className="flex flex-col justify-center items-center"
+                  >
+                    <NumericFormat
+                      className="text-xl font-bold text-brown-400 font-poppins mb-2 line-through"
+                      value={`${parseInt(p.harga_end_user) + 55000}`}
+                      displayType={"text"}
+                      thousandSeparator={true}
+                      prefix={"Rp. "}
+                    />
+                    <NumericFormat
+                      className="text-3xl font-bold text-brown-900 font-poppins mb-5"
+                      value={`${p.harga_end_user}`}
+                      displayType={"text"}
+                      thousandSeparator={true}
+                      prefix={"Rp. "}
+                    />
+                  </div>
+                );
+              })}
               <button
                 type="button"
                 className="flex items-center py-1.5 px-3 bg-pic-900 rounded-lg text-base md:text-lg lg:text-xl font-medium text-white shadow-md hover:bg-pic-800 focus:ring-1 focus:ring-white"
@@ -166,13 +191,18 @@ export default function LandingPage() {
             </div>
           </div>
           <div className="w-full md:w-1/2 bg-pic-900 p-8">
-            <Image
-              width={1080}
-              height={1080}
-              className="w-full h-full object-cover"
-              alt="..."
-              src="/paket-series.png"
-            />
+            {produk?.map((p: any) => {
+              return (
+                <Image
+                  key={p}
+                  width={1080}
+                  height={1080}
+                  className="w-full h-full object-cover"
+                  alt="..."
+                  src={p.image}
+                />
+              );
+            })}
           </div>
         </div>
       </section>

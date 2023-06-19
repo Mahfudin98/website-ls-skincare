@@ -5,6 +5,7 @@ import {
   QuestionMarkCircleIcon,
   MapPinIcon
 } from "@heroicons/react/24/outline";
+import { FaTiktok, FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 
 export default function FooterCustom() {
@@ -64,7 +65,7 @@ export default function FooterCustom() {
             <ul className="">
               <li className="mb-1">
                 <div className={`${styles["nav-li"]} group`}>
-                  <div>
+                  <div className="self-start">
                     <MapPinIcon className="w-5 h-5 mr-1" />
                   </div>
                   <p className="leading-relaxed text-justify">
@@ -75,13 +76,7 @@ export default function FooterCustom() {
               </li>
               <li className="mb-1">
                 <a href="#" className={`${styles["nav-li"]} group`}>
-                  <Image
-                    src="/icons/whatsapp.svg"
-                    className="w-5 h-5 mr-1 duration-150 ease-in delay-75 grayscale group-hover:grayscale-0"
-                    width={350}
-                    height={350}
-                    alt="Whatsapp"
-                  />{" "}
+                  <FaWhatsapp className="w-5 h-5 mr-1 duration-150 ease-in delay-75 grayscale group-hover:grayscale-0" />
                   Costumer Care
                 </a>
               </li>
@@ -130,13 +125,7 @@ export default function FooterCustom() {
                   href="#"
                   className="relative inline-flex items-center group text-sm font-normal text-brown-900 hover:text-white ease-in duration-150 delay-75 after:content-[''] after:bg-white after:w-full after:h-[2px] after:absolute after:-bottom-1 after:left-0-5 after:scale-0 after:hover:scale-100 after:origin-left after:ease-in after:duration-150 after:delay-75"
                 >
-                  <Image
-                    src="/icons/instagram.svg"
-                    className="w-5 h-5 mr-1 duration-150 ease-in delay-75 grayscale group-hover:grayscale-0"
-                    width={350}
-                    height={350}
-                    alt="Instagram"
-                  />{" "}
+                  <FaInstagram className="w-5 h-5 mr-1 duration-150 ease-in delay-75 grayscale group-hover:grayscale-0" />
                   Instagram
                 </a>
               </li>
@@ -145,13 +134,7 @@ export default function FooterCustom() {
                   href="#"
                   className="relative inline-flex items-center group text-sm font-normal text-brown-900 hover:text-white ease-in duration-150 delay-75 after:content-[''] after:bg-white after:w-full after:h-[2px] after:absolute after:-bottom-1 after:left-0-5 after:scale-0 after:hover:scale-100 after:origin-left after:ease-in after:duration-150 after:delay-75"
                 >
-                  <Image
-                    src="/icons/facebook.svg"
-                    className="w-5 h-5 mr-1 duration-150 ease-in delay-75 grayscale group-hover:grayscale-0"
-                    width={350}
-                    height={350}
-                    alt="Facebook"
-                  />{" "}
+                  <FaFacebook className="w-5 h-5 mr-1 duration-150 ease-in delay-75 grayscale group-hover:grayscale-0" />
                   Facebook
                 </a>
               </li>
@@ -160,13 +143,7 @@ export default function FooterCustom() {
                   href="#"
                   className="relative inline-flex items-center group text-sm font-normal text-brown-900 hover:text-white ease-in duration-150 delay-75 after:content-[''] after:bg-white after:w-full after:h-[2px] after:absolute after:-bottom-1 after:left-0-5 after:scale-0 after:hover:scale-100 after:origin-left after:ease-in after:duration-150 after:delay-75"
                 >
-                  <Image
-                    src="/icons/tiktok_rounded.svg"
-                    className="w-5 h-5 mr-1 duration-150 ease-in delay-75 grayscale group-hover:grayscale-0"
-                    width={350}
-                    height={350}
-                    alt="Tiktok"
-                  />{" "}
+                  <FaTiktok className="w-5 h-5 mr-1 duration-150 ease-in delay-75 grayscale group-hover:grayscale-0" />
                   Tiktok
                 </a>
               </li>
