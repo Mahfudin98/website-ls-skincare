@@ -16,5 +16,15 @@ export const usePageData = () => {
           if (error.response.status !== 409) throw error;
         })
   );
-  return { linktree };
+  const { data: landingPage } = useSWR(
+    `/api/member-page-view-lp/${router.query.page_name}`,
+    () =>
+      $axios
+        .get(`/api/member-page-view-lp/${router.query.page_name}`)
+        .then((res) => res.data.data)
+        .catch((error) => {
+          if (error.response.status !== 409) throw error;
+        })
+  );
+  return { linktree, landingPage };
 };
