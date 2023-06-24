@@ -12,11 +12,14 @@ export default function LoadingPage(props: LoadingProps) {
       }`}
     >
       {/* loading */}
-      <div className="loadingio-spinner-radio-bkcwab6bxgi">
-        <div className="ldio-lkhdq13mx9d bg-white">
-          <div></div>
-          <div></div>
-          <div></div>
+      <div className="loadingio-spinner-magnify-7kbm3962nj8">
+        <div className="ldio-v3y1xk1q5om">
+          <div>
+            <div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -3,14 +3,17 @@ import dynamic from "next/dynamic";
 import MemberList from "./member_list";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import useTranslation from "next-translate/useTranslation";
 
 const MapView = dynamic(() => import("./map_view"), {
   ssr: false
 });
 
 export default function MapsList() {
+  const { t } = useTranslation("common");
   const [location, setLocation] = useState({ latitude: 0, longitude: 0 });
   const [city, setCity] = useState("");
+  const [province, setProvince] = useState("");
   const [search, setSearch] = useState("");
   const token =
     "pk.eyJ1IjoibWFoZnVkaW45OCIsImEiOiJjbGRiYzRjcmowcmdqM29wa2ZleTJ5MGszIn0.3wHN_upxK3GoRLZhtriNvA";
@@ -39,7 +42,9 @@ export default function MapsList() {
                   const county = response.data.address.county;
                   const town = response.data.address.town;
                   const city = response.data.address.city;
+                  const state = t(response.data.address.state);
                   setCity(city ? city : county ? county : town);
+                  setProvince(state);
                 })
                 .catch((error) => {
                   console.error("Error getting city:", error);
@@ -64,8 +69,11 @@ export default function MapsList() {
               )
               .then((response) => {
                 const county = response.data.address.county;
+                const town = response.data.address.town;
                 const city = response.data.address.city;
-                setCity(city ? city : county);
+                const state = t(response.data.address.state);
+                setCity(city ? city : county ? county : town);
+                setProvince(state);
               })
               .catch((error) => {
                 console.error("Error getting city:", error);
@@ -79,7 +87,7 @@ export default function MapsList() {
     } else {
       console.error("Geolocation is not supported");
     }
-  }, [city, location.latitude, location.longitude, search]);
+  }, [city, location.latitude, location.longitude, search, t]);
   const handleCityChange = (e: any) => {
     setSearch(e.target.value);
   };
@@ -93,14 +101,16 @@ export default function MapsList() {
         </div>
         <div className="w-full lg:w-1/2 p-8">
           <div className="grid grid-cols-1">
-            <div className="flex flex-col justify-center mb-3">
+            <div className="flex flex-col justify-center items-center w-full mb-3">
               <h3 className="uppercase text-xl font-bold text-center text-brown-900 group hover:text-pic-800 inline-flex items-center cursor-pointer ease-in-out delay-75 duration-150 mb-3">
                 Temukan Agen dan Reseller LS Skincare
                 <MagnifyingGlassIcon className="h-6 w-6 text-brown-800 group-hover:ml-1.5 group-hover:text-pic-800 ml-0.5 ease-in delay-75 duration-150" />
               </h3>
-              <div className="block">
-                {`latitude: ${location.latitude}, longitude: ${location.longitude} => ${city}`}
-              </div>
+              {/* <div className="block">
+                {`latitude: ${location.latitude}, longitude: ${
+                  location.longitude
+                } => ${city} - ${t(province)}`}
+              </div> */}
             </div>
             <div className="mb-5 px-4">
               <label className="mb-2 text-sm font-medium text-brown-900 sr-only dark:text-white">
@@ -116,7 +126,7 @@ export default function MapsList() {
                   onChange={handleCityChange}
                   id="default-search"
                   className="block w-full p-4 pl-10 text-sm text-brown-900 border border-brown-300 rounded-lg bg-brown-50 focus:ring-pic-500 focus:border-pic-500 dark:bg-brown-700 dark:border-brown-600 dark:placeholder-brown-400 dark:text-white dark:focus:ring-pic-500 dark:focus:border-pic-500"
-                  placeholder={city}
+                  placeholder="Cari nama kota/kabupaten"
                   required
                 />
                 <button
@@ -127,7 +137,7 @@ export default function MapsList() {
                 </button>
               </div>
             </div>
-            <MemberList />
+            <MemberList search={city} />
           </div>
         </div>
       </div>
