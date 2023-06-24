@@ -96,7 +96,7 @@ export default function MapsList() {
       <div className="flex flex-wrap border border-pic-100 rounded-md shadow-lg relative overflow-hidden mb-8">
         <div className="w-full lg:w-1/2">
           <div className="text-center h-full flex items-center justify-center w-full text-5xl font-bold bg-pic-900">
-            <MapView />
+            <MapView token={token} location={location} />
           </div>
         </div>
         <div className="w-full lg:w-1/2 p-8">
