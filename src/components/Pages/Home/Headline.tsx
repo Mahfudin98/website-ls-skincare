@@ -6,7 +6,7 @@ export default function HeadlineHome() {
   return (
     <section className={`${styles["section-def"]} ${styles["headline"]}`}>
       <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2 mb-8">
+        <div className="w-full lg:w-1/2 mb-8 lg:pr-4">
           <h1 className={styles["h1-headline"]}>
             Temukan kulit sehatmu dengan rangkaian produk kami
           </h1>
@@ -26,7 +26,7 @@ export default function HeadlineHome() {
             </div>
           </button>
         </div>
-        <div className="w-full lg:w-1/2 h-[450px] lg:h-[450px]">
+        <div className="w-full lg:w-1/2 h-[450px] lg:pl-4">
           <Carousel>
             <Image
               height={1280}

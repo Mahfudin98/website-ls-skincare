@@ -94,7 +94,7 @@ export default function MapsList() {
   return (
     <section className="container p-2 mx-auto mt-5">
       <div className="flex flex-wrap border border-pic-100 rounded-md shadow-lg relative overflow-hidden mb-8">
-        <div className="w-full lg:w-1/2">
+        <div className="relative overflow-hidden w-full lg:w-1/2">
           <div className="text-center h-full flex items-center justify-center w-full text-5xl font-bold bg-pic-900">
             <MapView token={token} location={location} />
           </div>
@@ -106,11 +106,6 @@ export default function MapsList() {
                 Temukan Agen dan Reseller LS Skincare
                 <MagnifyingGlassIcon className="h-6 w-6 text-brown-800 group-hover:ml-1.5 group-hover:text-pic-800 ml-0.5 ease-in delay-75 duration-150" />
               </h3>
-              {/* <div className="block">
-                {`latitude: ${location.latitude}, longitude: ${
-                  location.longitude
-                } => ${city} - ${t(province)}`}
-              </div> */}
             </div>
             <div className="mb-5 px-4">
               <label className="mb-2 text-sm font-medium text-brown-900 sr-only dark:text-white">

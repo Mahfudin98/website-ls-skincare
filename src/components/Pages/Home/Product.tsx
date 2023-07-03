@@ -113,7 +113,12 @@ export default function ProductHome() {
                         <div className="flex items-center space-x-1.5 rounded-lg bg-pic-500 px-4 py-1.5 text-white duration-100 hover:bg-pic-600">
                           <ShoppingCartIcon className="w-4 h-4" />
 
-                          <button className="text-sm">Order Now</button>
+                          <a
+                            href="https://orderan.lsstore.id/cs/all-cs-new"
+                            className="text-sm"
+                          >
+                            Order Now
+                          </a>
                         </div>
                       </div>
                     </div>
