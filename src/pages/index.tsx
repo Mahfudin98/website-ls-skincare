@@ -5,6 +5,7 @@ import ProductHome from "@/components/Pages/Home/Product";
 import SellerHome from "@/components/Pages/Home/Seller";
 import MediaHome from "@/components/Pages/Home/Media";
 import Head from "next/head";
+import HeadlineAbout from "@/components/Pages/About/headline";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
       {/* headlie section */}
       <HeadlineHome />
       {/* about */}
-      <AboutHome />
+      <HeadlineAbout />
       {/* our product */}
       <ProductHome />
       {/* our seller */}
