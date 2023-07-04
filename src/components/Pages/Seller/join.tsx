@@ -10,7 +10,20 @@ export default function Join() {
           Join us
         </h1>
         <div className="mb-3 grid grid-cols-1 lg:grid-cols-3 gap-6 mx-auto">
-          <div className="px-6 py-8 bg-white border-2 border-pic-100 rounded-3xl shadow-md">
+          <div className="px-6 py-8 bg-white border-2 border-pic-100 rounded-3xl shadow-md relative overflow-hidden">
+            <div className="absolute -right-[100px] -top-[100px]">
+              <svg
+                className="w-[300px] h-[300px] rotate-12"
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#4E342E"
+                  d="M71.8,-23.4C80.7,3.8,66.8,38.4,41.5,56.7C16.2,74.9,-20.6,76.9,-44,60C-67.4,43.2,-77.4,7.4,-67.8,-20.9C-58.2,-49.2,-29.1,-69.9,1.2,-70.3C31.5,-70.7,63,-50.7,71.8,-23.4Z"
+                  transform="translate(100 100)"
+                />
+              </svg>
+            </div>
             <div className="flex flex-col">
               <span className="px-2 py-1.5 text-brown-600 mb-10 w-fit rounded-2xl bg-pic-50 border border-brown-100 text-xs uppercase font-medium font-poppins">
                 Customer
@@ -62,7 +75,20 @@ export default function Join() {
               </ul>
             </div>
           </div>
-          <div className="px-6 py-8 bg-white border-2 border-pic-100 rounded-3xl shadow-md">
+          <div className="px-6 py-8 bg-white border-2 border-pic-100 rounded-3xl shadow-md relative overflow-hidden">
+            <div className="absolute -right-[100px] -top-[100px]">
+              <svg
+                className="w-[300px] h-[300px]"
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#F27272"
+                  d="M44.2,-24.9C57.1,-3.1,67.4,20.9,59.6,37.6C51.8,54.4,25.9,64,0.2,63.8C-25.4,63.7,-50.8,53.8,-59.1,36.8C-67.3,19.8,-58.5,-4.4,-45.8,-26.1C-33.1,-47.8,-16.5,-67.1,-0.5,-66.8C15.6,-66.5,31.2,-46.8,44.2,-24.9Z"
+                  transform="translate(100 100)"
+                />
+              </svg>
+            </div>
             <div className="flex flex-col">
               <span className="px-2 py-1.5 text-brown-600 mb-10 w-fit rounded-2xl bg-pic-50 border border-brown-100 text-xs uppercase font-medium font-poppins">
                 Reseller
@@ -114,7 +140,20 @@ export default function Join() {
               </ul>
             </div>
           </div>
-          <div className="px-6 py-8 bg-white border-2 border-pic-100 rounded-3xl shadow-md">
+          <div className="px-6 py-8 bg-white border-2 border-pic-100 rounded-3xl shadow-md relative overflow-hidden">
+            <div className="absolute -right-[100px] -top-[100px]">
+              <svg
+                className="w-[300px] h-[300px]"
+                viewBox="0 0 200 200"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill="#F69C9C"
+                  d="M47.5,-51.5C63.1,-43.4,78.5,-30,80.8,-14.6C83.1,0.8,72.3,18.1,59.5,28.8C46.7,39.5,32,43.4,17.5,49.1C3.1,54.8,-11.1,62.2,-25.6,61C-40,59.7,-54.6,49.9,-58.8,36.8C-63,23.7,-56.7,7.4,-54.9,-10.9C-53.2,-29.2,-55.9,-49.5,-47.4,-58.9C-39,-68.2,-19.5,-66.7,-1.8,-64.6C15.9,-62.4,31.8,-59.6,47.5,-51.5Z"
+                  transform="translate(100 100)"
+                />
+              </svg>
+            </div>
             <div className="flex flex-col">
               <span className="px-2 py-1.5 text-brown-600 mb-10 w-fit rounded-2xl bg-pic-50 border border-brown-100 text-xs uppercase font-medium font-poppins">
                 Agen
@@ -167,98 +206,6 @@ export default function Join() {
             </div>
           </div>
         </div>
-        {/* <div className="flex flex-col sm:flex-col lg:flex-row xl:flex-row md:flex-row justify-center items center container">
-          <div className="py-12 sm:py-12 md:py-6 lg:py-6 xl:py-6 px-8 w-full md:max-w-min sm:w-full bg-pic-200 z-30">
-            <h1 className="text-brown-500 font-semibold text-xl">End User</h1>
-            <div className="text-center py-4 px-7">
-              <h1 className="text-brown-700 text-4xl font-black whitespace-nowrap">
-                Rp. 0 .-
-              </h1>
-            </div>
-            <div className="h-px bg-brown-200"></div>
-            <div className="text-center mt-3">
-              <ul>
-                <li className="text-start text-sm font-light">
-                  Kulit Glowing dan berseri.
-                </li>
-                <li className="text-start text-sm font-light">
-                  Lorem ipsum dolor sit amet.
-                </li>
-                <li className="text-start text-sm font-light">
-                  Lorem ipsum dolor sit amet.
-                </li>
-                <li className="text-start text-sm font-light">
-                  Lorem ipsum dolor sit amet.
-                </li>
-                <li className="text-start text-sm font-light">
-                  Lorem ipsum dolor sit amet.
-                </li>
-              </ul>
-            </div>
-            <button className="w-full mt-6 mb-3 py-2 text-white font-semibold bg-brown-700 hover:shadow-xl duration-200 hover:bg-brown-800">
-              Buy Now
-            </button>
-          </div>
-          <div className="py-12 sm:py-12 md:py-6 lg:py-6 xl:py-6 px-8 w-full md:max-w-min sm:w-full bg-pic-700 transform scale-1 sm:scale-1 md:scale-105 lg:scale-105 xl:scale-105 z-40  shadow-none sm:shadow-none md:shadow-xl lg:shadow-xl xl:shadow-xl">
-            <h1 className="text-brown-800 font-semibold text-xl ">Reseller</h1>
-            <div className="text-center py-4 px-7">
-              <h1 className="text-white text-4xl font-black whitespace-nowrap">
-                Rp. 450 K
-              </h1>
-            </div>
-            <div className="h-px bg-brown-400"></div>
-            <div className="text-center mt-3">
-              <ul>
-                <li className="text-start text-sm font-light">
-                  Kulit Glowing dan berseri.
-                </li>
-                <li className="text-start text-sm font-light">Member VIP</li>
-                <li className="text-start text-sm font-light">
-                  Pembinaan langsung dari Owner.
-                </li>
-                <li className="text-start text-sm font-light">
-                  PROMOTION DAN MARKETING KIT
-                </li>
-              </ul>
-            </div>
-            <button className="w-full mt-6 mb-3 py-2 text-white font-semibold bg-brown-400 hover:shadow-xl duration-200 hover:bg-brown-800">
-              Buy Now
-            </button>
-          </div>
-          <div className="py-12 sm:py-12 md:py-6 lg:py-6 xl:py-6 px-8 w-full md:max-w-min sm:w-full bg-pic-200 z-30">
-            <h1 className="text-brown-500 font-semibold text-xl ">Agen</h1>
-            <div className="text-center py-4 px-7">
-              <h1 className="text-brown-700 text-4xl font-black whitespace-nowrap">
-                Rp. 8 JT
-              </h1>
-            </div>
-            <div className="h-px bg-brown-200"></div>
-            <div className="text-center mt-3">
-              <ul>
-                <li className="text-start text-sm font-light">
-                  Kulit Glowing dan berseri.
-                </li>
-                <li className="text-start text-sm font-light">Member VVIP</li>
-                <li className="text-start text-sm font-light">
-                  Pembinaan langsung dari Owner.
-                </li>
-                <li className="text-start text-sm font-light">
-                  PROMOTION DAN MARKETING KIT
-                </li>
-                <li className="text-start text-sm font-light">
-                  Keuntungan Produk Sampai Dengan Rp. 66.000.
-                </li>
-                <li className="text-start text-sm font-light">
-                  Free Landing Page ( Domain & Hosting dengan CTA Langsung Ke
-                  Nomor Agen )
-                </li>
-              </ul>
-            </div>
-            <button className="w-full mt-6 mb-3 py-2 text-white font-semibold bg-brown-700 hover:shadow-xl duration-200 hover:bg-brown-800">
-              Buy Now
-            </button>
-          </div>
-        </div> */}
       </div>
     </section>
   );

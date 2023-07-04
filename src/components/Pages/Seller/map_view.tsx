@@ -19,5 +19,5 @@ export default function MapView(props: any) {
       map.remove();
     };
   }, [location]);
-  return <div id="map-container" style={{ width: "100%", height: "600px" }} />;
+  return <div id="map-container" style={{ width: "100%", height: "620px" }} />;
 }
