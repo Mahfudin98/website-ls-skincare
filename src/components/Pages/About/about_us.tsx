@@ -5,15 +5,15 @@ export default function AboutUs() {
     <section className="container mx-auto mb-5">
       <h1 className="text-center w-full capitalize">About Us</h1>
       <div className="flex w-full justify-center items-center">
-        <div className="relative flex-wrap flex overflow-hidden p-10 h-fit">
-          <div className="border-2 absolute border-opacity-20 border-brown-900 h-full left-[50%]"></div>
+        <div className="relative flex-wrap flex p-0 md:p-5 lg:p-10 h-fit">
+          <div className="border-2 absolute border-opacity-20 border-brown-900 h-full left-3 md:left-[50%]"></div>
           {/* sejarah */}
           <div className="mb-8 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center justify-center order-1 bg-brown-800 shadow-xl w-8 h-8 rounded-full">
+            <div className="order-1 hidden md:flex md:w-6/12 lg:w-5/12"></div>
+            <div className="z-20 mr-2 md:ml-2 lg:mr-0 lg:ml-0 flex items-center justify-center order-1 bg-brown-800 shadow-xl w-8 h-8 rounded-full">
               <BiHistory className="w-5 h-5 text-pic-800 dark:text-pic-300" />
             </div>
-            <div className="order-1 bg-brown-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-brown-100 rounded-lg shadow-xl w-full md:w-6/12 lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-brown-800 text-xl">
                 Sejarah LS Skincare
               </h3>
@@ -32,12 +32,12 @@ export default function AboutUs() {
             </div>
           </div>
           {/* visi misi */}
-          <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center justify-center order-1 bg-brown-800 shadow-xl w-8 h-8 rounded-full">
+          <div className="mb-8 flex justify-between md:flex-row-reverse items-center w-full left-timeline">
+            <div className="order-1 hidden md:flex md:w-6/12 lg:w-5/12"></div>
+            <div className="z-20 mr-2 md:ml-2 lg:mr-0 lg:ml-0 flex items-center justify-center order-1 bg-brown-800 shadow-xl w-8 h-8 rounded-full">
               <BiTargetLock className="w-5 h-5 text-pic-800 dark:text-pic-300" />
             </div>
-            <div className="order-1 bg-pic-700 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-pic-700 rounded-lg shadow-xl w-full md:w-6/12 lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">
                 Visi Misi LS Skincare
               </h3>
@@ -79,11 +79,11 @@ export default function AboutUs() {
           </div>
           {/* target */}
           <div className="mb-8 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center justify-center order-1 bg-brown-800 shadow-xl w-8 h-8 rounded-full">
+            <div className="order-1 hidden md:flex md:w-6/12 lg:w-5/12"></div>
+            <div className="z-20 mr-2 md:ml-2 lg:mr-0 lg:ml-0 flex items-center justify-center order-1 bg-brown-800 shadow-xl w-8 h-8 rounded-full">
               <GiHumanTarget className="w-5 h-5 text-pic-800 dark:text-pic-300" />
             </div>
-            <div className="order-1 bg-brown-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-brown-100 rounded-lg shadow-xl w-full md:w-6/12 lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-brown-800 text-xl">
                 Target LS Skincare
               </h3>
@@ -97,12 +97,12 @@ export default function AboutUs() {
             </div>
           </div>
           {/* product */}
-          <div className="mb-8 flex justify-between flex-row-reverse items-center w-full left-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center justify-center order-1 bg-brown-800 shadow-xl w-8 h-8 rounded-full">
+          <div className="mb-8 flex justify-between md:flex-row-reverse items-center w-full left-timeline">
+            <div className="order-1 hidden md:flex md:w-6/12 lg:w-5/12"></div>
+            <div className="z-20 mr-2 md:ml-2 lg:mr-0 lg:ml-0 flex items-center justify-center order-1 bg-brown-800 shadow-xl w-8 h-8 rounded-full">
               <BiBasket className="w-5 h-5 text-pic-800 dark:text-pic-300" />
             </div>
-            <div className="order-1 bg-pic-700 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-pic-700 rounded-lg shadow-xl w-full md:w-6/12 lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-white text-xl">
                 Produk LS Skincare
               </h3>
@@ -128,11 +128,11 @@ export default function AboutUs() {
           </div>
           {/* keuksesan */}
           <div className="mb-8 flex justify-between items-center w-full right-timeline">
-            <div className="order-1 w-5/12"></div>
-            <div className="z-20 flex items-center justify-center order-1 bg-brown-800 shadow-xl w-8 h-8 rounded-full">
+            <div className="order-1 hidden md:flex md:w-6/12 lg:w-5/12"></div>
+            <div className="z-20 mr-2 md:ml-2 lg:mr-0 lg:ml-0 flex items-center justify-center order-1 bg-brown-800 shadow-xl w-8 h-8 rounded-full">
               <BiParty className="w-5 h-5 text-pic-800 dark:text-pic-300" />
             </div>
-            <div className="order-1 bg-brown-100 rounded-lg shadow-xl w-5/12 px-6 py-4">
+            <div className="order-1 bg-brown-100 rounded-lg shadow-xl w-full md:w-6/12 lg:w-5/12 px-6 py-4">
               <h3 className="mb-3 font-bold text-brown-800 text-xl">
                 Kesuksesan LS Skincare
               </h3>

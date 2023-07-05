@@ -2,7 +2,6 @@ import Head from "next/head";
 import HeaderCustom from "../Header/header";
 import FooterCustom from "../Footer/footer";
 import { ReactNode } from "react";
-// import ChatBubble from "../Widget/Chat/chat_buble";
 
 interface LayoutProps {
   children: ReactNode;
@@ -22,8 +21,6 @@ export default function Layout(props: LayoutProps) {
       <main className="relative">
         <HeaderCustom />
         <main className="container px-4 mx-auto">{children}</main>
-        {/* chat bubble */}
-        {/* <ChatBubble /> */}
         <FooterCustom />
       </main>
     </>

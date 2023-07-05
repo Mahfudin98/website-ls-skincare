@@ -3,6 +3,15 @@ import { useEffect, useState } from "react";
 import useSWR from "swr";
 
 export const useProductData = () => {
+  const [categories, setCategories] = useState([
+    {
+      id: Number(),
+      code: new String(),
+      category: new String(),
+      type: new String(),
+      product: Number()
+    }
+  ]);
   const { data: product } = useSWR("/api/product-list-customer", () =>
     $axios
       .get("/api/product-list-customer")
@@ -21,5 +30,18 @@ export const useProductData = () => {
       })
   );
   const csrf = () => $axios.get("/sanctum/csrf-cookie");
-  return { product, topProduct };
+  const getCategory = async () => {
+    await csrf();
+    $axios
+      .get(`/api/product-category-customer`)
+      .then((res: any) => {
+        res.data.data;
+        setCategories(res.data.data);
+      })
+      .catch((error) => {
+        if (error.response.status !== 409) throw error;
+      });
+    return categories;
+  };
+  return { product, topProduct, categories, getCategory };
 };

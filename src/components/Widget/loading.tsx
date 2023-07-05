@@ -1,3 +1,4 @@
+import styles from "./loading.module.css";
 interface LoadingProps {
   show: boolean;
 }
@@ -12,8 +13,8 @@ export default function LoadingPage(props: LoadingProps) {
       }`}
     >
       {/* loading */}
-      <div className="loadingio-spinner-magnify-7kbm3962nj8">
-        <div className="ldio-v3y1xk1q5om">
+      <div className={styles["loadingio-spinner-magnify-7kbm3962nj8"]}>
+        <div className={styles["ldio-v3y1xk1q5om"]}>
           <div>
             <div>
               <div></div>
