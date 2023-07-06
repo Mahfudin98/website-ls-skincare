@@ -122,7 +122,7 @@ export default function FooterCustom() {
             <ul className="">
               <li className="mb-1">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/lsskincarepusat/"
                   className="relative inline-flex items-center group text-sm font-normal text-brown-900 hover:text-white ease-in duration-150 delay-75 after:content-[''] after:bg-white after:w-full after:h-[2px] after:absolute after:-bottom-1 after:left-0-5 after:scale-0 after:hover:scale-100 after:origin-left after:ease-in after:duration-150 after:delay-75"
                 >
                   <FaInstagram className="w-5 h-5 mr-1 duration-150 ease-in delay-75 grayscale group-hover:grayscale-0" />
@@ -140,7 +140,7 @@ export default function FooterCustom() {
               </li>
               <li className="mb-1">
                 <a
-                  href="#"
+                  href="https://www.tiktok.com/@lsskincareofficial"
                   className="relative inline-flex items-center group text-sm font-normal text-brown-900 hover:text-white ease-in duration-150 delay-75 after:content-[''] after:bg-white after:w-full after:h-[2px] after:absolute after:-bottom-1 after:left-0-5 after:scale-0 after:hover:scale-100 after:origin-left after:ease-in after:duration-150 after:delay-75"
                 >
                   <FaTiktok className="w-5 h-5 mr-1 duration-150 ease-in delay-75 grayscale group-hover:grayscale-0" />

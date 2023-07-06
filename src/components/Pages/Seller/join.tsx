@@ -66,7 +66,7 @@ export default function Join() {
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
                   <TbWashDryOff className="h-6 w-6 mr-2" />
-                  Keuntungan produk kebih besar.
+                  Keuntungan produk lebih besar.
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
                   <TbWashDryOff className="h-6 w-6 mr-2" />
@@ -131,7 +131,7 @@ export default function Join() {
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
                   <TbWashDryOff className="h-6 w-6 mr-2" />
-                  Keuntungan produk kebih besar.
+                  Keuntungan produk lebih besar.
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
                   <TbWashDryOff className="h-6 w-6 mr-2" />
@@ -196,7 +196,7 @@ export default function Join() {
                 </li>
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
                   <TbCheckbox className="h-6 w-6 mr-2" />
-                  Keuntungan produk kebih besar.
+                  Keuntungan produk lebih besar.
                 </li>
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
                   <TbCheckbox className="h-6 w-6 mr-2" />

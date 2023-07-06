@@ -11,8 +11,9 @@ export default function HeadlineHome() {
             Temukan kulit sehatmu dengan rangkaian produk kami
           </h1>
           <p className={styles["text-headline"]}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis
-            qui quae dicta repellat fuga aliquam mollitia minus nam cum sunt?
+            Temukan Kulit Sehatmu dengan Rangkaian Produk Kami: Keajaiban
+            Perawatan Kulit dalam Setiap Tetes, untuk hasil yang memukau dan
+            percaya diri yang memancar.
           </p>
           <button
             type="button"

@@ -33,9 +33,9 @@ export default function TopAgen() {
           .map((member: any, index: Key | null | undefined) => {
             return (
               <div className="col-span-12 lg:col-span-4 relative" key={index}>
-                <div className="absolute -top-11 -right-7 lg:-top-20 lg:-right-2 flex justify-center z-20">
+                <div className="absolute -top-11 -right-7 2xl:-top-20 2xl:-right-2 flex justify-center z-20">
                   <svg
-                    className={`object-cover w-20 lg:w-48 rotate-[24deg] lg:rotate-45 ${
+                    className={`object-cover w-20 2xl:w-48 rotate-[24deg] 2xl:rotate-45 ${
                       index === 0
                         ? "fill-[#ffd700]"
                         : index === 1
