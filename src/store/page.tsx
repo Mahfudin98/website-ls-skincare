@@ -5,6 +5,12 @@ import useSWR from "swr";
 
 export const usePageData = () => {
   const router = useRouter();
+  const [imageHead, setImageHead] = useState([
+    {
+      image: new String(),
+      alt: new String()
+    }
+  ]);
   const csrf = () => $axios.get("/sanctum/csrf-cookie");
   const { data: linktree } = useSWR(
     `/api/member-page-view-linktree/${router.query.link_name}`,
@@ -26,5 +32,19 @@ export const usePageData = () => {
           if (error.response.status !== 409) throw error;
         })
   );
-  return { linktree, landingPage };
+  const headlineImage = async () => {
+    await csrf();
+    $axios
+      .get("/api/image-headline")
+      .then((res) => {
+        res.data.data;
+        setImageHead(res.data.data);
+      })
+      .catch((error) => {
+        if (error.response.status !== 409) throw error;
+      });
+
+    return imageHead;
+  };
+  return { linktree, landingPage, imageHead, headlineImage };
 };

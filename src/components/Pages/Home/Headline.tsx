@@ -2,11 +2,21 @@ import { ShoppingBagIcon } from "@heroicons/react/24/outline";
 import { Carousel } from "flowbite-react";
 import Image from "next/image";
 import styles from "./home.module.css";
+import { usePageData } from "@/store/page";
+import { useEffect } from "react";
+import LoadingPage from "@/components/Widget/loading";
 export default function HeadlineHome() {
+  const { imageHead, headlineImage } = usePageData();
+  useEffect(() => {
+    headlineImage();
+    imageHead;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <section className={`${styles["section-def"]} ${styles["headline"]}`}>
       <div className="flex flex-wrap">
-        <div className="w-full lg:w-1/2 mb-8 lg:pr-4">
+        <div className="w-full mb-8 lg:w-1/2 lg:pr-4">
           <h1 className={styles["h1-headline"]}>
             Temukan kulit sehatmu dengan rangkaian produk kami
           </h1>
@@ -23,42 +33,24 @@ export default function HeadlineHome() {
             <div
               className={`${styles["icon-headline"]} group-hover:bg-white group-hover:rounded-r-md`}
             >
-              <ShoppingBagIcon className="w-6 h-6 group-hover:text-brown-900 text-white ease-in duration-150 delay-0" />
+              <ShoppingBagIcon className="w-6 h-6 text-white duration-150 ease-in group-hover:text-brown-900 delay-0" />
             </div>
           </button>
         </div>
         <div className="w-full lg:w-1/2 h-[450px] lg:pl-4">
           <Carousel>
-            <Image
-              height={1280}
-              width={1280}
-              src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-              alt="..."
-            />
-            <Image
-              height={1280}
-              width={1280}
-              src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-              alt="..."
-            />
-            <Image
-              height={1280}
-              width={1280}
-              src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-              alt="..."
-            />
-            <Image
-              height={1280}
-              width={1280}
-              src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
-              alt="..."
-            />
-            <Image
-              height={1280}
-              width={1280}
-              src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-              alt="..."
-            />
+            {imageHead?.map((image: any, index) => {
+              return (
+                <Image
+                  key={index}
+                  height={1280}
+                  width={1280}
+                  src={image.image}
+                  alt={image.alt}
+                  className="object-cover md:w-full md:h-full md:object-contain bg-gradient-to-tr from-pic-200 via-brown-100 to-pic-50"
+                />
+              );
+            })}
           </Carousel>
         </div>
       </div>
