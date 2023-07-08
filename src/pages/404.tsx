@@ -7,6 +7,7 @@ export default function Custom404() {
     <Layout>
       <Head>
         <title>LS - Skicare | Linktee</title>
+        <meta property="og:title" content="Halaman tidak ditemukan"></meta>
       </Head>
       <Error404 />
     </Layout>

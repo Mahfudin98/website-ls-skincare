@@ -10,6 +10,18 @@ export default function Seller() {
     <Layout>
       <Head>
         <title> LS Skincare - Seller </title>
+        <meta
+          property="og:title"
+          content="TEMUKAN AGEN DAN RESELLER LS SKINCARE"
+        ></meta>
+        <meta
+          name="description"
+          content="Jadilah bagian dari tim kami sebagai reseller atau agen produk skincare kami. Dapatkan keuntungan menarik dan jangkau pelanggan di seluruh wilayah Indonesia."
+        ></meta>
+        <meta
+          property="og:url"
+          content="https://pusat.lsskincare.id/seller/"
+        ></meta>
       </Head>
       <Breadcrumb title="Seller" navigate="seller" />
       <MapsList />

@@ -46,6 +46,14 @@ export default function LandingPage() {
     <Layout>
       <Head>
         <title> LS Skincare </title>
+        <meta
+          property="og:title"
+          content="Landing page agen LS Skincare"
+        ></meta>
+        <meta
+          name="description"
+          content="Jelajahi koleksi produk skincare kami yang menghadirkan solusi efektif untuk perawatan kulit Anda. Temukan keajaiban kulit sehat dengan produk-produk terbaik kami."
+        ></meta>
       </Head>
       {!isFound && <Error404 />}
       {isFound && (

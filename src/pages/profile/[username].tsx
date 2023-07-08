@@ -8,6 +8,10 @@ export default function Profile() {
     <Layout>
       <Head>
         <title> LS Skincare - Profile</title>
+        <meta
+          property="og:title"
+          content="Profile agen dan reseller LS Skincare"
+        ></meta>
       </Head>
       <Breadcrumb title="Profile" navigate="profile" />
       <CardLayout />

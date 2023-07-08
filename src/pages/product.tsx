@@ -87,6 +87,18 @@ export default function Product() {
     <Layout>
       <Head>
         <title> LS Skincare - Product </title>
+        <meta
+          property="og:title"
+          content="Related: Booster, Series, Acne, Serum, Formen"
+        ></meta>
+        <meta
+          name="description"
+          content="Jelajahi koleksi produk skincare kami yang menghadirkan solusi efektif untuk perawatan kulit Anda. Temukan keajaiban kulit sehat dengan produk-produk terbaik kami."
+        ></meta>
+        <meta
+          property="og:url"
+          content="https://pusat.lsskincare.id/product/"
+        ></meta>
       </Head>
       <Breadcrumb title="Product" navigate="product" />
       <ProductSearch search={search} setSearch={setSearch} />

@@ -12,6 +12,15 @@ export default function Home() {
     <Layout>
       <Head>
         <title> LS Skincare - Home </title>
+        <meta
+          property="og:title"
+          content="Temukan Rahasia Kulit Sehat dengan Produk Skincare Terbaik"
+        ></meta>
+        <meta
+          name="description"
+          content="Selamat datang di website resmi kami. Temukan solusi perawatan kulit terbaik untuk mencapai kulit sehat dan bercahaya."
+        ></meta>
+        <meta property="og:url" content="https://pusat.lsskincare.id/"></meta>
       </Head>
       {/* headlie section */}
       <HeadlineHome />

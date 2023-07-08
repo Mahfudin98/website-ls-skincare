@@ -12,6 +12,18 @@ export default function Media() {
     <Layout>
       <Head>
         <title> LS Skincare - Media </title>
+        <meta
+          property="og:title"
+          content="LS Skincacare (ELSTM) kembali mendapatkan penghargaan sebagai Top BRAND SKINCARE AWARD WINNER 2021 dari Pusat Prestasi Indonesia di hotel Mercure Gatot subroto, Jakarta pada Jum’at 11/06/2021."
+        ></meta>
+        <meta
+          name="description"
+          content="Dapatkan informasi terbaru tentang produk, tren perawatan kulit, dan berita terkini dari dunia kecantikan."
+        ></meta>
+        <meta
+          property="og:url"
+          content="https://pusat.lsskincare.id/media/"
+        ></meta>
       </Head>
       <Breadcrumb title="Media" navigate="media" />
       <section className="container p-2 mx-auto 2xl:my-12">

@@ -14,7 +14,7 @@ export default function Layout(props: LayoutProps) {
       <Head>
         <meta
           name="description"
-          content="LS Skincare adalah sebuah brand skincare asal Majalengka"
+          content="LS Skincare adalah sebuah brand skincare yang berasal dari Majalengka, Indonesia. Brand ini telah menjadikan dirinya sebagai salah satu pemimpin pasar dalam industri perawatan kulit dengan produk-produk berkualitas tinggi. Misi utama LS Skincare adalah memberikan solusi efektif dan inovatif bagi perawatan kulit yang aman dan terpercaya bagi semua jenis kulit."
         />
         <link rel="shortcut icon" href="/logo.ico" type="image/x-icon" />
       </Head>
