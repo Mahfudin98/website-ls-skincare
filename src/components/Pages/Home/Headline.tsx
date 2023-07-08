@@ -3,12 +3,13 @@ import { Carousel } from "flowbite-react";
 import Image from "next/image";
 import styles from "./home.module.css";
 import { usePageData } from "@/store/page";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import LoadingPage from "@/components/Widget/loading";
 export default function HeadlineHome() {
   const { imageHead, headlineImage } = usePageData();
+  const [show, setShow] = useState(true);
   useEffect(() => {
-    headlineImage();
+    headlineImage().then(() => setShow(false));
     imageHead;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -37,18 +38,25 @@ export default function HeadlineHome() {
             </div>
           </button>
         </div>
-        <div className="w-full lg:w-1/2 h-[450px] lg:pl-4">
+        <div className="w-full lg:w-1/2">
           <Carousel>
             {imageHead?.map((image: any, index) => {
               return (
-                <Image
+                <div
                   key={index}
-                  height={1280}
-                  width={1280}
-                  src={image.image}
-                  alt={image.alt}
-                  className="object-cover md:w-full md:h-full md:object-contain bg-gradient-to-tr from-pic-200 via-brown-100 to-pic-50"
-                />
+                  className="relative flex items-center justify-center overflow-hidden rounded-lg shadow-md bg-gradient-to-tr from-pic-200 via-brown-100 to-pic-50"
+                >
+                  {show && <LoadingPage show={show} />}
+                  {!show && (
+                    <Image
+                      height={1280}
+                      width={1280}
+                      src={image.image}
+                      alt={image.alt}
+                      className="object-cover w-full h-full md:object-contain"
+                    />
+                  )}
+                </div>
               );
             })}
           </Carousel>
