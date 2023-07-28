@@ -39,7 +39,7 @@ export default function FooterCustom() {
               </a>
               <a href="https://s.lazada.co.id/s.OaJvE">
                 <Image
-                  src="/icons/lazada.svg"
+                  src="/icons/icons8-lazada-400.svg"
                   className={styles["market-image"]}
                   width={350}
                   height={350}
