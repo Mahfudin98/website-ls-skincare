@@ -28,27 +28,33 @@ export default function FooterCustom() {
           <div>
             <h1 className={styles["market-text"]}>Our Marketplace</h1>
             <div className="inline-flex -space-x-2 w-fit">
-              <Image
-                src="/icons/shopee.svg"
-                className={styles["market-image"]}
-                width={350}
-                height={350}
-                alt="Shopee"
-              />
-              <Image
-                src="/icons/lazada.svg"
-                className={styles["market-image"]}
-                width={350}
-                height={350}
-                alt="Shopee"
-              />
-              <Image
-                src="/icons/tiktok.svg"
-                className={styles["market-image"]}
-                width={350}
-                height={350}
-                alt="Shopee"
-              />
+              <a href="https://shp.ee/hqz6jgb">
+                <Image
+                  src="/icons/shopee.svg"
+                  className={styles["market-image"]}
+                  width={350}
+                  height={350}
+                  alt="Shopee"
+                />
+              </a>
+              <a href="https://s.lazada.co.id/s.OaJvE">
+                <Image
+                  src="/icons/lazada.svg"
+                  className={styles["market-image"]}
+                  width={350}
+                  height={350}
+                  alt="Shopee"
+                />
+              </a>
+              <a href="https://www.tiktok.com/@lsskincareofficial">
+                <Image
+                  src="/icons/tiktok.svg"
+                  className={styles["market-image"]}
+                  width={350}
+                  height={350}
+                  alt="Shopee"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -57,7 +63,7 @@ export default function FooterCustom() {
         <div className="relative grid grid-cols-12 gap-6 px-2 mb-5">
           <div className="col-span-6 md:col-span-12 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
-              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
+              <h1 className="sticky z-10 mb-0 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
                 Contact Us
               </h1>
               <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />
@@ -84,7 +90,7 @@ export default function FooterCustom() {
           </div>
           <div className="col-span-6 md:col-span-4 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
-              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
+              <h1 className="sticky z-10 mb-0 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
                 Menu
               </h1>
               <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />
@@ -114,7 +120,7 @@ export default function FooterCustom() {
           </div>
           <div className="col-span-6 md:col-span-4 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
-              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
+              <h1 className="sticky z-10 mb-0 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
                 Social Media
               </h1>
               <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />
@@ -151,7 +157,7 @@ export default function FooterCustom() {
           </div>
           <div className="col-span-6 md:col-span-4 lg:col-span-3">
             <div className="relative mb-5 overflow-hidden cursor-pointer group">
-              <h1 className="sticky z-10 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900 mb-0">
+              <h1 className="sticky z-10 mb-0 text-lg font-semibold text-center text-white duration-150 ease-in delay-75 group-hover:text-brown-900">
                 Help Desk
               </h1>
               <div className="absolute top-0 left-0 w-full h-full duration-150 ease-in delay-75 translate-y-40 bg-white group-hover:translate-y-0" />
