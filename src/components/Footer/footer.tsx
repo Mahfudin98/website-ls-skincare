@@ -43,7 +43,7 @@ export default function FooterCustom() {
                   className={styles["market-image"]}
                   width={350}
                   height={350}
-                  alt="Shopee"
+                  alt="Lazada"
                 />
               </a>
               <a href="https://www.tiktok.com/@lsskincareofficial">
@@ -52,7 +52,7 @@ export default function FooterCustom() {
                   className={styles["market-image"]}
                   width={350}
                   height={350}
-                  alt="Shopee"
+                  alt="Tiktok"
                 />
               </a>
             </div>
