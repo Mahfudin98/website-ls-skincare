@@ -93,22 +93,22 @@ export default function MapsList() {
   };
   return (
     <section className="container p-2 mx-auto mt-5">
-      <div className="flex flex-wrap border border-pic-100 rounded-md shadow-lg relative overflow-hidden mb-8">
-        <div className="relative overflow-hidden w-full lg:w-1/2">
-          <div className="text-center h-full flex items-center justify-center w-full text-5xl font-bold bg-pic-900">
+      <div className="relative flex flex-wrap mb-8 overflow-hidden border rounded-md shadow-lg border-pic-100">
+        <div className="relative w-full overflow-hidden lg:w-1/2">
+          <div className="flex items-center justify-center w-full h-full text-5xl font-bold text-center bg-pic-900">
             <MapView token={token} location={location} />
           </div>
         </div>
-        <div className="w-full lg:w-1/2 p-8">
-          <div className="grid grid-cols-1">
-            <div className="flex flex-col justify-center items-center w-full mb-3">
-              <h3 className="uppercase text-xl font-bold text-center text-brown-900 group hover:text-pic-800 inline-flex items-center cursor-pointer ease-in-out delay-75 duration-150 mb-3">
+        <div className="w-full px-1 py-2 md:py-8 lg:px-8 lg:py-8 lg:w-1/2">
+          <div className="flex flex-col w-full">
+            <div className="flex flex-col items-center justify-center w-full mb-3">
+              <h3 className="inline-flex items-center mb-3 text-xl font-bold text-center uppercase duration-150 ease-in-out delay-75 cursor-pointer text-brown-900 group hover:text-pic-800">
                 Temukan Agen dan Reseller LS Skincare
                 <MagnifyingGlassIcon className="h-6 w-6 text-brown-800 group-hover:ml-1.5 group-hover:text-pic-800 ml-0.5 ease-in delay-75 duration-150" />
               </h3>
             </div>
-            <div className="mb-5 px-4">
-              <label className="mb-2 text-sm font-medium text-brown-900 sr-only dark:text-white">
+            <div className="px-4 mb-5">
+              <label className="mb-2 text-sm font-medium sr-only text-brown-900 dark:text-white">
                 Search
               </label>
               <div className="relative">
@@ -120,7 +120,7 @@ export default function MapsList() {
                   value={search}
                   onChange={handleCityChange}
                   id="default-search"
-                  className="block w-full p-4 pl-10 text-sm text-brown-900 border border-brown-300 rounded-lg bg-brown-50 focus:ring-pic-500 focus:border-pic-500 dark:bg-brown-700 dark:border-brown-600 dark:placeholder-brown-400 dark:text-white dark:focus:ring-pic-500 dark:focus:border-pic-500"
+                  className="block w-full p-4 pl-10 text-sm border rounded-lg text-brown-900 border-brown-300 bg-brown-50 focus:ring-pic-500 focus:border-pic-500 dark:bg-brown-700 dark:border-brown-600 dark:placeholder-brown-400 dark:text-white dark:focus:ring-pic-500 dark:focus:border-pic-500"
                   placeholder="Cari nama kota/kabupaten"
                   required
                 />
