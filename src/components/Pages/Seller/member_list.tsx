@@ -49,9 +49,19 @@ export default function MemberList(props: any) {
             return (
               <li
                 key={member.member_id}
-                className="relative flex items-center w-full gap-2 overflow-hidden transition ease-in-out delay-75 shadow-md group bg-pic-50 hover:bg-pic-300 rounded-3xl shadow-slate-500/40 hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/60"
+                className={`relative flex items-center w-full gap-2 overflow-hidden transition ease-in-out delay-75 shadow-md group ${
+                  member.member_type == "Reseller"
+                    ? "bg-pic-50 hover:bg-pic-300"
+                    : "bg-gold-500 hover:bg-gold-400"
+                } rounded-3xl shadow-slate-500/40 hover:-translate-y-1 hover:scale-105 hover:shadow-lg hover:shadow-slate-500/60`}
               >
-                <div className="w-[25%] p-2 rounded-r-lg bg-brown-600">
+                <div
+                  className={`w-[25%] p-2 rounded-r-lg ${
+                    member.member_type == "Reseller"
+                      ? "bg-brown-600"
+                      : "bg-pic-700"
+                  }`}
+                >
                   <Image
                     width={1080}
                     height={1080}
@@ -61,7 +71,7 @@ export default function MemberList(props: any) {
                         : member.member_image
                     }
                     alt={member.nama_member}
-                    className="object-cover w-full h-full rounded-full"
+                    className="object-cover w-[60px] h-[60px] md:w-[130px] md:h-[130px] lg:w-[100px] lg:h-[100px] 2xl:w-[130px] 2xl:h-[130px] rounded-full"
                   />
                 </div>
                 <div className="flex flex-col w-[60%]">
@@ -87,7 +97,7 @@ export default function MemberList(props: any) {
                     className="group"
                   >
                     <FaBagShopping className="w-full h-full text-pic-600 group-hover:text-pic-700" />
-                    <p className="text-xs font-medium text-center md:text-base text-brown-800 group-hover:text-brown-900 font-poppins">
+                    <p className="text-xs font-medium text-center md:text-base text-brown-800 font-poppins">
                       Pesan
                     </p>
                   </a>
