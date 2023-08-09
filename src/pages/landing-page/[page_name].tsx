@@ -64,35 +64,35 @@ export default function LandingPage() {
                 <Image
                   width={1080}
                   height={1080}
-                  className="w-full h-full object-cover"
+                  className="object-cover w-full h-full"
                   alt="..."
                   src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
                 />
                 <Image
                   width={1080}
                   height={1080}
-                  className="w-full h-full object-cover"
+                  className="object-cover w-full h-full"
                   alt="..."
                   src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
                 />
                 <Image
                   width={1080}
                   height={1080}
-                  className="w-full h-full object-cover"
+                  className="object-cover w-full h-full"
                   alt="..."
                   src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
                 />
                 <Image
                   width={1080}
                   height={1080}
-                  className="w-full h-full object-cover"
+                  className="object-cover w-full h-full"
                   alt="..."
                   src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
                 />
                 <Image
                   width={1080}
                   height={1080}
-                  className="w-full h-full object-cover"
+                  className="object-cover w-full h-full"
                   alt="..."
                   src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
                 />
@@ -103,20 +103,20 @@ export default function LandingPage() {
                     Terdaftar
                   </h2>
                   <div className="grid grid-cols-2 gap-2">
-                    <div className="w-10 h-10 relative overflow-hidden flex justify-center items-center rounded-full ring-1 ring-pic-900">
+                    <div className="relative flex items-center justify-center w-10 h-10 overflow-hidden rounded-full ring-1 ring-pic-900">
                       <Image
                         width={1080}
                         height={1080}
-                        className="w-8 h-8 object-cover"
+                        className="object-cover w-8 h-8"
                         alt="..."
                         src="/bpom.png"
                       />
                     </div>
-                    <div className="w-10 h-10 relative overflow-hidden flex justify-center items-center rounded-full ring-1 ring-pic-900">
+                    <div className="relative flex items-center justify-center w-10 h-10 overflow-hidden rounded-full ring-1 ring-pic-900">
                       <Image
                         width={1080}
                         height={1080}
-                        className="w-8 h-8 object-cover"
+                        className="object-cover w-8 h-8"
                         alt="..."
                         src="/mui.png"
                       />
@@ -133,45 +133,45 @@ export default function LandingPage() {
             </div>
           </section>
           <section className="container p-2 mx-auto my-2.5">
-            <div className="flex flex-col justify-center items-center">
-              <h2 className="text-center text-base font-poppins font-normal text-brown-900 mb-3">
+            <div className="flex flex-col items-center justify-center">
+              <h2 className="mb-3 text-base font-normal text-center font-poppins text-brown-900">
                 {pages?.title}
               </h2>
-              <ArrowDownCircleIcon className="h-14 w-14 text-brown-900 animate-bounce transition ease-in-out mb-3" />
+              <ArrowDownCircleIcon className="mb-3 transition ease-in-out h-14 w-14 text-brown-900 animate-bounce" />
             </div>
-            <div className="flex flex-wrap items-center w-full bg-pic-500 mb-5 mt-20 md:mt-0 rounded-md shadow-md relative">
-              <div className="absolute -top-20 md:top-0 md:bottom-0 md:h-full w-full flex justify-center z-10">
+            <div className="relative flex flex-wrap items-center w-full mt-20 mb-5 rounded-md shadow-md bg-pic-500 md:mt-0">
+              <div className="absolute z-10 flex justify-center w-full -top-20 md:top-0 md:bottom-0 md:h-full">
                 <div className="w-[100px] h-[190px] md:h-full md:w-[120px] lg:w-[200px] flex justify-center items-center rounded-md">
                   <Image
                     width={1080}
                     height={1080}
-                    className="w-full h-full object-cover"
+                    className="object-cover w-full h-full"
                     alt="..."
                     src={`/${imgProduct}.png`}
                   />
                 </div>
               </div>
               <div className="w-full md:w-1/2">
-                <div className="pl-8 pr-8 pt-32 pb-8 md:pl-6 lg:pl-16 md:pr-20 lg:pr-32 md:pt-8 lg:pt-0 md:pb-8 lg:pb-0">
+                <div className="pt-32 pb-8 pl-8 pr-8 md:pl-6 lg:pl-16 md:pr-20 lg:pr-32 md:pt-8 lg:pt-0 md:pb-8 lg:pb-0">
                   <h3 className="text-lg font-bold text-brown-900 font-poppins">
                     {product?.product_name}
                   </h3>
-                  <article className="mt-3 text-base font-poppins font-normal text-brown-700 mb-3">
+                  <article className="mt-3 mb-3 text-base font-normal font-poppins text-brown-700">
                     {pages?.description != null
                       ? pages.description
                       : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, dignissimos odit fugiat dolorum mollitianecessitatibus animi aspernatur ipsam omnis quaerat."}
                   </article>
                 </div>
               </div>
-              <div className="w-full h-full md:w-1/2 bg-pic-900 rounded-b-md md:rounded-b-none md:rounded-r-md relative overflow-hidden">
+              <div className="relative w-full h-full overflow-hidden md:w-1/2 bg-pic-900 rounded-b-md md:rounded-b-none md:rounded-r-md">
                 <Image
                   width={1080}
                   height={1080}
-                  className="w-full h-full object-cover"
+                  className="object-cover w-full h-full"
                   alt="..."
                   src="/model.png"
                 />
-                <div className="absolute w-full h-full flex justify-center items-center top-12 md:top-14 -left-2 lg:top-24 lg:-left-6 2xl:top-28 2xl:-left-8 z-10">
+                <div className="absolute z-10 flex items-center justify-center w-full h-full top-12 md:top-14 -left-2 lg:top-24 lg:-left-6 2xl:top-28 2xl:-left-8">
                   <Image
                     width={1080}
                     height={1080}
@@ -184,26 +184,26 @@ export default function LandingPage() {
             </div>
           </section>
           <section className="container p-2 mx-auto mb-2.5">
-            <div className="flex flex-wrap items-center bg-pic-100 rounded-lg shadow-md relative overflow-hidden">
+            <div className="relative flex flex-wrap items-center overflow-hidden rounded-lg shadow-md bg-pic-100">
               <div className="w-full md:w-1/2 md:order-last">
-                <div className="flex flex-col justify-center items-center p-8">
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold uppercase text-brown-900 font-poppins mb-3">
+                <div className="flex flex-col items-center justify-center p-8">
+                  <h2 className="mb-3 text-xl font-semibold uppercase md:text-2xl lg:text-3xl text-brown-900 font-poppins">
                     Special Offer
                   </h2>
-                  <p className="text-base md:text-lg lg:text-xl font-normal text-brown-700 font-poppins text-center mb-3">
+                  <p className="mb-3 text-base font-normal text-center md:text-lg lg:text-xl text-brown-700 font-poppins">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Animi, expedita?
                   </p>
-                  <div className="flex flex-col justify-center items-center">
+                  <div className="flex flex-col items-center justify-center">
                     <NumericFormat
-                      className="text-xl font-bold text-brown-400 font-poppins mb-2 line-through"
+                      className="mb-2 text-xl font-bold line-through text-brown-400 font-poppins"
                       value={`${pages?.harga_discount}`}
                       displayType={"text"}
                       thousandSeparator={true}
                       prefix={"Rp. "}
                     />
                     <NumericFormat
-                      className="text-3xl font-bold text-brown-900 font-poppins mb-5"
+                      className="mb-5 text-3xl font-bold text-brown-900 font-poppins"
                       value={`${pages?.harga_jual}`}
                       displayType={"text"}
                       thousandSeparator={true}
@@ -215,15 +215,15 @@ export default function LandingPage() {
                     className="flex items-center py-1.5 px-3 bg-pic-900 rounded-lg text-base md:text-lg lg:text-xl font-medium text-white shadow-md hover:bg-pic-800 focus:ring-1 focus:ring-white"
                   >
                     Shop Now
-                    <ShoppingCartIcon className="h-6 w-6 ml-2" />
+                    <ShoppingCartIcon className="w-6 h-6 ml-2" />
                   </a>
                 </div>
               </div>
-              <div className="w-full md:w-1/2 bg-pic-900 p-8">
+              <div className="w-full p-8 md:w-1/2 bg-pic-900">
                 <Image
                   width={1080}
                   height={1080}
-                  className="w-full h-full object-cover"
+                  className="object-cover w-full h-full"
                   alt="..."
                   src={product?.image}
                 />
