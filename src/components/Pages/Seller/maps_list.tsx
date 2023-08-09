@@ -44,7 +44,6 @@ export default function MapsList() {
                 const city = response.data.address.city;
                 const state = t(response.data.address.state);
                 setCity(city ? city : county ? county : town ? town : state);
-                console.log(response);
               })
               .catch((error) => {
                 console.error("Error getting city:", error);
