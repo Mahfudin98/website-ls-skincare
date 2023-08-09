@@ -9,7 +9,7 @@ const nextConfig = {
       "api-report.lsskincare.id",
       "images.unsplash.com",
       "ui-avatars.com",
-      "127.0.0.1:8000"
+      "127.0.0.1"
     ],
     formats: ["image/avif", "image/webp"]
   },

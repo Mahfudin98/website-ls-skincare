@@ -13,50 +13,59 @@ export default function MapsList() {
   const { t } = useTranslation("common");
   const [location, setLocation] = useState({ latitude: 0, longitude: 0 });
   const [city, setCity] = useState("");
-  const [province, setProvince] = useState("");
+  const [searchValue, setSearchValue] = useState("");
   const [search, setSearch] = useState("");
   const token =
     "pk.eyJ1IjoibWFoZnVkaW45OCIsImEiOiJjbGRiYzRjcmowcmdqM29wa2ZleTJ5MGszIn0.3wHN_upxK3GoRLZhtriNvA";
+  const handleSearch = () => {
+    if (search !== "") {
+      setSearchValue(search);
+      axios
+        .get(
+          `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+            search ? search : city
+          )}.json?access_token=${token}`
+        )
+        .then((response) => {
+          const features = response.data.features;
+          if (features.length > 0) {
+            const coordinates = features[0].center;
+            setLocation({
+              latitude: coordinates[1],
+              longitude: coordinates[0]
+            });
+            axios
+              .get(
+                `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${location.latitude}&lon=${location.longitude}`
+              )
+              .then((response) => {
+                const county = response.data.address.county;
+                const town = response.data.address.town;
+                const city = response.data.address.city;
+                const state = t(response.data.address.state);
+                setCity(city ? city : county ? county : town ? town : state);
+                console.log(response);
+              })
+              .catch((error) => {
+                console.error("Error getting city:", error);
+              });
+          } else {
+            console.error("No coordinates found for the city");
+          }
+        })
+        .catch((error) => {
+          console.error("Error geocoding city:", error);
+        });
+    }
+  };
+  const handleKeyPress = (event: any) => {
+    if (event.key === "Enter") {
+      handleSearch();
+    }
+  };
   useEffect(() => {
     if (navigator.geolocation) {
-      if (search !== "") {
-        axios
-          .get(
-            `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
-              search ? search : city
-            )}.json?access_token=${token}`
-          )
-          .then((response) => {
-            const features = response.data.features;
-            if (features.length > 0) {
-              const coordinates = features[0].center;
-              setLocation({
-                latitude: coordinates[1],
-                longitude: coordinates[0]
-              });
-              axios
-                .get(
-                  `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${location.latitude}&lon=${location.longitude}`
-                )
-                .then((response) => {
-                  const county = response.data.address.county;
-                  const town = response.data.address.town;
-                  const city = response.data.address.city;
-                  const state = t(response.data.address.state);
-                  setCity(city ? city : county ? county : town);
-                  setProvince(state);
-                })
-                .catch((error) => {
-                  console.error("Error getting city:", error);
-                });
-            } else {
-              console.error("No coordinates found for the city");
-            }
-          })
-          .catch((error) => {
-            console.error("Error geocoding city:", error);
-          });
-      } else if (search === "") {
+      if (search === "") {
         navigator.geolocation.getCurrentPosition(
           (position) => {
             setLocation({
@@ -72,8 +81,10 @@ export default function MapsList() {
                 const town = response.data.address.town;
                 const city = response.data.address.city;
                 const state = t(response.data.address.state);
-                setCity(city ? city : county ? county : town);
-                setProvince(state);
+                setCity(city ? city : county ? county : town ? town : state);
+                setSearchValue(
+                  city ? city : county ? county : town ? town : state
+                );
               })
               .catch((error) => {
                 console.error("Error getting city:", error);
@@ -88,9 +99,6 @@ export default function MapsList() {
       console.error("Geolocation is not supported");
     }
   }, [city, location.latitude, location.longitude, search, t]);
-  const handleCityChange = (e: any) => {
-    setSearch(e.target.value);
-  };
   return (
     <section className="container p-2 mx-auto mt-5">
       <div className="relative flex flex-wrap mb-8 overflow-hidden border rounded-md shadow-lg border-pic-100">
@@ -118,7 +126,8 @@ export default function MapsList() {
                 <input
                   type="search"
                   value={search}
-                  onChange={handleCityChange}
+                  onChange={(e) => setSearch(e.target.value)}
+                  onKeyPress={handleKeyPress}
                   id="default-search"
                   className="block w-full p-4 pl-10 text-sm border rounded-lg text-brown-900 border-brown-300 bg-brown-50 focus:ring-pic-500 focus:border-pic-500 dark:bg-brown-700 dark:border-brown-600 dark:placeholder-brown-400 dark:text-white dark:focus:ring-pic-500 dark:focus:border-pic-500"
                   placeholder="Cari nama kota/kabupaten"
@@ -126,13 +135,14 @@ export default function MapsList() {
                 />
                 <button
                   type="submit"
+                  onClick={handleSearch}
                   className="text-white absolute right-2.5 bottom-2.5 bg-pic-700 hover:bg-pic-800 focus:ring-4 focus:outline-none focus:ring-pic-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-pic-600 dark:hover:bg-pic-700 dark:focus:ring-pic-800"
                 >
                   Search
                 </button>
               </div>
             </div>
-            <MemberList search={city} />
+            <MemberList search={searchValue !== "" ? searchValue : city} />
           </div>
         </div>
       </div>

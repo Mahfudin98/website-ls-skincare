@@ -1,23 +1,37 @@
 import { useEffect, useState } from "react";
 import LoadingPage from "@/components/Widget/loading";
 import { useSellerData } from "@/store/seller_data";
-import { useRajaongkir } from "@/store/rajaongkir";
 import Image from "next/image";
 import { FaBagShopping } from "react-icons/fa6";
+import Fuse from "fuse.js";
 export default function MemberList(props: any) {
   const { search = "" } = props;
-  const { kota } = useRajaongkir();
   const { seller } = useSellerData();
   const [show, setShow] = useState(true);
-  const kabupaten = kota?.filter((el: any) => {
-    return el.city_name === search || el.city_name === search.split(" ")[0];
-  });
-  let memberFilters: any[] = [];
-  kabupaten?.map((city: any) => {
-    memberFilters = seller?.filter((el: any) => {
-      return el.member_city_id === city.city_id;
+  let filterMember: any[] = [];
+  const options = {
+    includeScore: true,
+    keys: ["member_kota"] // Adjust this if your data structure is different
+  };
+  const fuse = new Fuse(seller, options);
+  let result: any[] = [];
+  const sanitizedSearchTerm = search
+    .replace(/(city of|Regency)/i, "")
+    .trim()
+    .toLowerCase();
+
+  if (sanitizedSearchTerm !== "") {
+    result = fuse.search(sanitizedSearchTerm).map((result) => result.item);
+  }
+  if (seller) {
+    filterMember = seller?.filter((m: any) => {
+      return (
+        m.member_kota?.toLowerCase().includes(sanitizedSearchTerm) ||
+        m.member_kecamatan?.toLowerCase().includes(sanitizedSearchTerm)
+      );
     });
-  });
+  }
+
   useEffect(() => {
     if (seller?.length > 0) {
       setShow(false);
@@ -28,7 +42,7 @@ export default function MemberList(props: any) {
     <div className="h-[425px] p-4 relative overflow-y-auto">
       <LoadingPage show={show} />
       {/* list agen reseller */}
-      {memberFilters?.length <= 0 && (
+      {filterMember?.length <= 0 && (
         <div
           className={`flex justify-center items-center w-full h-full ${
             show ? "hidden" : "block"
@@ -43,9 +57,9 @@ export default function MemberList(props: any) {
           />
         </div>
       )}
-      {memberFilters?.length > 0 && (
+      {filterMember?.length > 0 && (
         <ul className="flex flex-col gap-3">
-          {memberFilters?.map((member: any) => {
+          {filterMember?.map((member: any) => {
             return (
               <li
                 key={member.member_id}
@@ -67,32 +81,33 @@ export default function MemberList(props: any) {
                     height={1080}
                     src={
                       member.member_image == null
-                        ? `https://ui-avatars.com/api/?name=${member.nama_member}&background=random&size=350`
+                        ? `https://ui-avatars.com/api/?name=${member.member_name}&background=random&size=350`
                         : member.member_image
                     }
-                    alt={member.nama_member}
+                    alt={member.member_name}
                     className="object-cover w-[60px] h-[60px] md:w-[130px] md:h-[130px] lg:w-[100px] lg:h-[100px] 2xl:w-[130px] 2xl:h-[130px] rounded-full"
                   />
                 </div>
                 <div className="flex flex-col w-[60%]">
                   <h2 className="text-sm font-semibold md:text-2xl text-brown-900 font-poppins">
-                    {member.nama_member}
+                    {member.member_name}
                   </h2>
                   <p className="text-xs font-medium md:text-lg text-brown-700 font-poppins">
                     {member.member_type}
                   </p>
                   <p className="text-xs font-medium md:text-lg text-brown-700 font-poppins">
-                    {search.split(" ")[0]}
+                    {member.member_provinsi} - {member.member_kota} -{" "}
+                    {member.member_kecamatan}
                   </p>
                 </div>
                 <div className="w-[15%] p-2 rounded-l-2xl bg-white shadow-md">
                   <a
-                    href={`https://wa.me/${member.phone_member
+                    href={`https://wa.me/${member.member_phone
                       .replace(/[ -]/g, "")
                       .replace(/^0/, "62")}?text=Hallo%20${
                       member.member_type
                     }%20${
-                      member.nama_member
+                      member.member_name
                     }%20saya%20ingin%20pesan%20produk%20LS%20Skincare,%20apakah%20masih%20ada?`}
                     className="group"
                   >
