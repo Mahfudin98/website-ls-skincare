@@ -24,13 +24,16 @@ export const usePageData = () => {
   );
   const { data: landingPage } = useSWR(
     `/api/member-page-view-lp/${router.query.page_name}`,
-    () =>
-      $axios
-        .get(`/api/member-page-view-lp/${router.query.page_name}`)
-        .then((res) => res.data.data)
-        .catch((error) => {
-          if (error.response.status !== 409) throw error;
-        })
+    () => {
+      if (router.query.page_name) {
+        $axios
+          .get(`/api/member-page-view-lp/${router.query.page_name}`)
+          .then((res) => res.data.data)
+          .catch((error) => {
+            if (error.response.status !== 409) throw error;
+          });
+      }
+    }
   );
   const headlineImage = async () => {
     await csrf();

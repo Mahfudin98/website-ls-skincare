@@ -27,15 +27,19 @@ export const useSellerData = () => {
           if (error.response.status !== 409) throw error;
         })
   );
+
   const { data: sellerDetail } = useSWR(
     `/api/owner-member-detail-qr/${router.query.username}`,
-    () =>
-      $axios
-        .get(`/api/owner-member-detail-qr/${router.query.username}`)
-        .then((res) => res.data.data)
-        .catch((error) => {
-          if (error.response.status !== 409) throw error;
-        })
+    () => {
+      if (router.query.username) {
+        $axios
+          .get(`/api/owner-member-detail-qr/${router.query.username}`)
+          .then((res) => res.data.data)
+          .catch((error) => {
+            if (error.response.status !== 409) throw error;
+          });
+      }
+    }
   );
   return { seller, topAgen, sellerDetail };
 };

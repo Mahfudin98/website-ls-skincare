@@ -18,43 +18,47 @@ export default function MapsList() {
   const token =
     "pk.eyJ1IjoibWFoZnVkaW45OCIsImEiOiJjbGRiYzRjcmowcmdqM29wa2ZleTJ5MGszIn0.3wHN_upxK3GoRLZhtriNvA";
   const handleSearch = () => {
-    if (search !== "") {
-      setSearchValue(search);
-      axios
-        .get(
-          `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
-            search ? search : city
-          )}.json?access_token=${token}`
-        )
-        .then((response) => {
-          const features = response.data.features;
-          if (features.length > 0) {
-            const coordinates = features[0].center;
-            setLocation({
-              latitude: coordinates[1],
-              longitude: coordinates[0]
-            });
-            axios
-              .get(
-                `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${location.latitude}&lon=${location.longitude}`
-              )
-              .then((response) => {
-                const county = response.data.address.county;
-                const town = response.data.address.town;
-                const city = response.data.address.city;
-                const state = t(response.data.address.state);
-                setCity(city ? city : county ? county : town ? town : state);
-              })
-              .catch((error) => {
-                console.error("Error getting city:", error);
+    if (navigator.geolocation) {
+      if (search !== "") {
+        setSearchValue(search);
+        axios
+          .get(
+            `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
+              search ? search : city
+            )}.json?access_token=${token}`
+          )
+          .then((response) => {
+            const features = response.data.features;
+            if (features.length > 0) {
+              const coordinates = features[0].center;
+              setLocation({
+                latitude: coordinates[1],
+                longitude: coordinates[0]
               });
-          } else {
-            console.error("No coordinates found for the city");
-          }
-        })
-        .catch((error) => {
-          console.error("Error geocoding city:", error);
-        });
+              axios
+                .get(
+                  `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${location.latitude}&lon=${location.longitude}`
+                )
+                .then((response) => {
+                  const county = response.data.address.county;
+                  const town = response.data.address.town;
+                  const city = response.data.address.city;
+                  const state = t(response.data.address.state);
+                  setCity(city ? city : county ? county : town ? town : state);
+                })
+                .catch((error) => {
+                  console.error("Error getting city:", error);
+                });
+            } else {
+              console.error("No coordinates found for the city");
+            }
+          })
+          .catch((error) => {
+            console.error("Error geocoding city:", error);
+          });
+      }
+    } else {
+      console.error("Geolocation is not supported");
     }
   };
   const handleKeyPress = (event: any) => {

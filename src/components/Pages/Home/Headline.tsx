@@ -44,7 +44,7 @@ export default function HeadlineHome() {
               return (
                 <div
                   key={index}
-                  className="relative flex items-center justify-center overflow-hidden rounded-lg shadow-md bg-gradient-to-tr from-pic-200 via-brown-100 to-pic-50"
+                  className="relative flex items-center h-full max-h-[450px] justify-center overflow-hidden rounded-lg shadow-md bg-gradient-to-tr from-pic-200 via-brown-100 to-pic-50"
                 >
                   {show && <LoadingPage show={show} />}
                   {!show && (

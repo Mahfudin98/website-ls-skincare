@@ -23,7 +23,13 @@ export default function MemberList(props: any) {
   if (sanitizedSearchTerm !== "") {
     result = fuse.search(sanitizedSearchTerm).map((result) => result.item);
   }
-  if (seller) {
+
+  useEffect(() => {
+    if (seller?.length > 0) {
+      setShow(false);
+    }
+  }, [seller, setShow]);
+  if (!show) {
     filterMember = seller?.filter((m: any) => {
       return (
         m.member_kota?.toLowerCase().includes(sanitizedSearchTerm) ||
@@ -31,12 +37,6 @@ export default function MemberList(props: any) {
       );
     });
   }
-
-  useEffect(() => {
-    if (seller?.length > 0) {
-      setShow(false);
-    }
-  }, [seller, setShow]);
 
   return (
     <div className="h-[425px] p-4 relative overflow-y-auto">
