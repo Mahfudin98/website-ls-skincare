@@ -24,7 +24,6 @@
     "eslint-config-next": "13.3.0",
     "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.3",
-    "fuse.js": "^6.6.2",
     "leaflet": "^1.9.4",
     "lodash": "^4.17.21",
     "mapbox-gl": "^2.15.0",

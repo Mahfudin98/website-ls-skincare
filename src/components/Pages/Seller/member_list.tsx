@@ -3,26 +3,15 @@ import LoadingPage from "@/components/Widget/loading";
 import { useSellerData } from "@/store/seller_data";
 import Image from "next/image";
 import { FaBagShopping } from "react-icons/fa6";
-import Fuse from "fuse.js";
 export default function MemberList(props: any) {
   const { search = "" } = props;
   const { seller } = useSellerData();
   const [show, setShow] = useState(true);
   let filterMember: any[] = [];
-  const options = {
-    includeScore: true,
-    keys: ["member_kota"] // Adjust this if your data structure is different
-  };
-  const fuse = new Fuse(seller, options);
-  let result: any[] = [];
   const sanitizedSearchTerm = search
     .replace(/(city of|Regency)/i, "")
     .trim()
     .toLowerCase();
-
-  if (sanitizedSearchTerm !== "") {
-    result = fuse.search(sanitizedSearchTerm).map((result) => result.item);
-  }
 
   useEffect(() => {
     if (seller?.length > 0) {
