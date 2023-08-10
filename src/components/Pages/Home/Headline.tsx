@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./home.module.css";
 import { usePageData } from "@/store/page";
 import { useEffect, useState } from "react";
-import LoadingPage from "@/components/Widget/loading";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 export default function HeadlineHome() {
   const { imageHead, headlineImage } = usePageData();
   const [show, setShow] = useState(true);
@@ -46,7 +46,9 @@ export default function HeadlineHome() {
                   key={index}
                   className="relative flex items-center h-full max-h-[450px] justify-center overflow-hidden rounded-lg shadow-md bg-gradient-to-tr from-pic-200 via-brown-100 to-pic-50"
                 >
-                  {show && <LoadingPage show={show} />}
+                  {show && (
+                    <AiOutlineLoading3Quarters className="w-8 h-8 text-pic-900 animate-spin" />
+                  )}
                   {!show && (
                     <Image
                       height={1280}

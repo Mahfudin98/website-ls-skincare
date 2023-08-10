@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import LoadingPage from "@/components/Widget/loading";
 import { useSellerData } from "@/store/seller_data";
 import Image from "next/image";
 import { FaBagShopping } from "react-icons/fa6";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 export default function MemberList(props: any) {
   const { search = "" } = props;
   const { seller } = useSellerData();
@@ -29,7 +29,15 @@ export default function MemberList(props: any) {
 
   return (
     <div className="h-[425px] p-4 relative overflow-y-auto">
-      <LoadingPage show={show} />
+      <div
+        className={`w-full h-full items-center justify-center ${
+          !show ? "hidden" : "flex"
+        }`}
+      >
+        <AiOutlineLoading3Quarters
+          className={`w-8 h-8 text-pic-900 animate-spin`}
+        />
+      </div>
       {/* list agen reseller */}
       {filterMember?.length <= 0 && (
         <div
