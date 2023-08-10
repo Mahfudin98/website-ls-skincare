@@ -44,7 +44,7 @@ export default function HeadlineHome() {
               return (
                 <div
                   key={index}
-                  className="relative flex items-center h-full max-h-[450px] justify-center overflow-hidden rounded-lg shadow-md bg-gradient-to-tr from-pic-200 via-brown-100 to-pic-50"
+                  className="relative flex items-center h-full max-h-[450px] w-full max-w-[768px] justify-center overflow-hidden rounded-lg shadow-md bg-gradient-to-tr from-pic-200 via-brown-100 to-pic-50"
                 >
                   {show && (
                     <AiOutlineLoading3Quarters className="w-8 h-8 text-pic-900 animate-spin" />
@@ -55,7 +55,7 @@ export default function HeadlineHome() {
                       width={1280}
                       src={image.image}
                       alt={image.alt}
-                      className="object-cover w-full h-full md:object-contain"
+                      className="object-cover h-full max-h-[450px] w-full max-w-[768px] md:object-contain"
                     />
                   )}
                 </div>

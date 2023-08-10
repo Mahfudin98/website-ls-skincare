@@ -19,6 +19,10 @@ export default function Document() {
           }}
         />
         <Head />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Dongle&family=Poppins&family=Sofia+Sans+Condensed&display=swap"
+          rel="stylesheet"
+        />
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-S38JF4SPBK"
