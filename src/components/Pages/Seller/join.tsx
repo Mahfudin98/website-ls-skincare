@@ -6,11 +6,11 @@ export default function Join() {
   return (
     <section className="container p-2 mx-auto">
       <div className="py-5">
-        <h1 className="mb-10 text-2xl lg:text-4xl font-bold leading-tight text-brown-900 uppercase text-center">
+        <h1 className="mb-10 text-2xl font-bold leading-tight text-center uppercase lg:text-4xl text-brown-900">
           Join us
         </h1>
-        <div className="mb-3 grid grid-cols-1 lg:grid-cols-3 gap-6 mx-auto">
-          <div className="px-6 py-8 bg-white border-2 border-pic-100 rounded-3xl shadow-md relative overflow-hidden">
+        <div className="grid grid-cols-1 gap-6 mx-auto mb-3 lg:grid-cols-3">
+          <div className="relative px-6 py-8 overflow-hidden bg-white border-2 shadow-md border-pic-100 rounded-3xl">
             <div className="absolute -right-[100px] -top-[100px]">
               <svg
                 className="w-[300px] h-[300px] rotate-12"
@@ -31,51 +31,51 @@ export default function Join() {
 
               <h1>IDR 0</h1>
               <div className="my-3">
-                <h3 className="text-sm font-poppins font-medium text-brown-700">
+                <h3 className="text-sm font-medium font-poppins text-brown-700">
                   Untuk customer biasa
                 </h3>
-                <h3 className="text-base font-poppins font-semibold text-brown-800">
+                <h3 className="text-base font-semibold font-poppins text-brown-800">
                   Tanpa keuntungan tambahan dari produk
                 </h3>
               </div>
               <a
                 href="https://orderan.lsstore.id/cs/all-cs-new"
-                className="w-full flex text-center mb-6 bg-brown-700 text-white items-center justify-center text-lg font-semibold font-poppins py-2 px-6 rounded-3xl hover:bg-brown-800 focus:ring-4 focus:ring-brown-300"
+                className="flex items-center justify-center w-full px-6 py-2 mb-6 text-lg font-semibold text-center text-white bg-brown-700 font-poppins rounded-3xl hover:bg-brown-800 focus:ring-4 focus:ring-brown-300"
               >
-                <ShoppingCartIcon className="h-6 w-6 mr-2" /> Shop Now
+                <ShoppingCartIcon className="w-6 h-6 mr-2" /> Shop Now
               </a>
-              <h2 className="text-base font-poppins font-semibold text-brown-900">
+              <h2 className="text-base font-semibold font-poppins text-brown-900">
                 Keuntungan:
               </h2>
-              <ul className="w-full flex flex-col justify-start items-center my-4 gap-3">
+              <ul className="flex flex-col items-center justify-start w-full gap-3 my-4">
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Kulit glowing dan berseri
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbWashDryOff className="h-6 w-6 mr-2" />
+                  <TbWashDryOff className="w-6 h-6 mr-2" />
                   Member VIP
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbWashDryOff className="h-6 w-6 mr-2" />
+                  <TbWashDryOff className="w-6 h-6 mr-2" />
                   Pembinaan langsung dari Owner.
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbWashDryOff className="h-6 w-6 mr-2" />
+                  <TbWashDryOff className="w-6 h-6 mr-2" />
                   Promotion dan marketing kit.
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbWashDryOff className="h-6 w-6 mr-2" />
+                  <TbWashDryOff className="w-6 h-6 mr-2" />
                   Keuntungan produk lebih besar.
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbWashDryOff className="h-6 w-6 mr-2" />
+                  <TbWashDryOff className="w-6 h-6 mr-2" />
                   Free Landing Page & Linktree.
                 </li>
               </ul>
             </div>
           </div>
-          <div className="px-6 py-8 bg-white border-2 border-pic-100 rounded-3xl shadow-md relative overflow-hidden">
+          <div className="relative px-6 py-8 overflow-hidden bg-white border-2 shadow-md border-pic-100 rounded-3xl">
             <div className="absolute -right-[100px] -top-[100px]">
               <svg
                 className="w-[300px] h-[300px]"
@@ -96,51 +96,51 @@ export default function Join() {
 
               <h1>IDR 450K</h1>
               <div className="my-3">
-                <h3 className="text-sm font-poppins font-medium text-brown-700">
+                <h3 className="text-sm font-medium font-poppins text-brown-700">
                   Untuk customer reseller
                 </h3>
-                <h3 className="text-base font-poppins font-semibold text-brown-800">
+                <h3 className="text-base font-semibold font-poppins text-brown-800">
                   Dengan keuntungan tambahan dari produk
                 </h3>
               </div>
               <a
                 href="https://orderan.lsstore.id/cs/join-reseller-new"
-                className="w-full flex text-center mb-6 bg-pic-800 text-white items-center justify-center text-lg font-semibold font-poppins py-2 px-6 rounded-3xl hover:bg-pic-900 focus:ring-4 focus:ring-brown-300"
+                className="flex items-center justify-center w-full px-6 py-2 mb-6 text-lg font-semibold text-center text-white bg-pic-800 font-poppins rounded-3xl hover:bg-pic-900 focus:ring-4 focus:ring-brown-300"
               >
-                <TbMoodDollar className="h-6 w-6 mr-2" /> Join Now
+                <TbMoodDollar className="w-6 h-6 mr-2" /> Join Now
               </a>
-              <h2 className="text-base font-poppins font-semibold text-brown-900">
+              <h2 className="text-base font-semibold font-poppins text-brown-900">
                 Keuntungan:
               </h2>
-              <ul className="w-full flex flex-col justify-start items-center my-4 gap-3">
+              <ul className="flex flex-col items-center justify-start w-full gap-3 my-4">
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Kulit glowing dan berseri
                 </li>
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Member VIP
                 </li>
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Pembinaan langsung dari Owner.
                 </li>
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Promotion dan marketing kit.
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbWashDryOff className="h-6 w-6 mr-2" />
+                  <TbWashDryOff className="w-6 h-6 mr-2" />
                   Keuntungan produk lebih besar.
                 </li>
                 <li className="flex items-center line-through justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbWashDryOff className="h-6 w-6 mr-2" />
+                  <TbWashDryOff className="w-6 h-6 mr-2" />
                   Free Landing Page & Linktree.
                 </li>
               </ul>
             </div>
           </div>
-          <div className="px-6 py-8 bg-white border-2 border-pic-100 rounded-3xl shadow-md relative overflow-hidden">
+          <div className="relative px-6 py-8 overflow-hidden bg-white border-2 shadow-md border-pic-100 rounded-3xl">
             <div className="absolute -right-[100px] -top-[100px]">
               <svg
                 className="w-[300px] h-[300px]"
@@ -159,47 +159,47 @@ export default function Join() {
                 Agen
               </span>
 
-              <h1>IDR 18Juta</h1>
+              <h1>IDR 27Juta</h1>
               <div className="my-3">
-                <h3 className="text-sm font-poppins font-medium text-brown-700">
+                <h3 className="text-sm font-medium font-poppins text-brown-700">
                   Untuk customer agen
                 </h3>
-                <h3 className="text-base font-poppins font-semibold text-brown-800">
+                <h3 className="text-base font-semibold font-poppins text-brown-800">
                   Menjadi prioritas dan keutungan yang melimpah
                 </h3>
               </div>
               <a
                 href="https://orderan.lsstore.id/cs/join-agen"
-                className="w-full flex text-center mb-6 bg-pic-600 text-white items-center justify-center text-lg font-semibold font-poppins py-2 px-6 rounded-3xl hover:bg-pic-700 focus:ring-4 focus:ring-brown-300"
+                className="flex items-center justify-center w-full px-6 py-2 mb-6 text-lg font-semibold text-center text-white bg-pic-600 font-poppins rounded-3xl hover:bg-pic-700 focus:ring-4 focus:ring-brown-300"
               >
-                <TbMoodDollar className="h-6 w-6 mr-2" /> Join Now
+                <TbMoodDollar className="w-6 h-6 mr-2" /> Join Now
               </a>
-              <h2 className="text-base font-poppins font-semibold text-brown-900">
+              <h2 className="text-base font-semibold font-poppins text-brown-900">
                 Keuntungan:
               </h2>
-              <ul className="w-full flex flex-col justify-start items-center my-4 gap-3">
+              <ul className="flex flex-col items-center justify-start w-full gap-3 my-4">
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Kulit glowing dan berseri
                 </li>
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Member VVIP
                 </li>
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Pembinaan langsung dari Owner.
                 </li>
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Promotion dan marketing kit.
                 </li>
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Keuntungan produk lebih besar.
                 </li>
                 <li className="flex items-center justify-start w-full text-base font-poppins font-medium text-brown-700 border-b-2 pb-2.5 border-brown-100">
-                  <TbCheckbox className="h-6 w-6 mr-2" />
+                  <TbCheckbox className="w-6 h-6 mr-2" />
                   Free Landing Page & Linktree.
                 </li>
               </ul>
