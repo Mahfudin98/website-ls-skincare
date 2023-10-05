@@ -49,7 +49,7 @@ export default function ProductGrid(props: any) {
                 <div
                   className={`rounded-xl hidden group-hover:block ${styles["animate-gradient"]} w-[250%] h-[500%] absolute -top-[60%] -left-[50%] bg-gradient-to-r from-pic-900 via-brown-200/40 to-pic-700 shadow-xl`}
                 />
-                <div className="w-full relative z-10">
+                <div className="relative z-10 w-full">
                   <div className="relative overflow-hidden rounded-t-xl">
                     <Image
                       src={product.image}
@@ -59,15 +59,15 @@ export default function ProductGrid(props: any) {
                       className="w-full h-[350px] object-cover"
                     />
                   </div>
-                  <div className="bg-white rounded-b-xl p-4 border-t border-brown-600">
-                    <h2 className="text-lg font-bold font-poppins uppercase text-brown-900 mb-1">
+                  <div className="p-4 bg-white border-t rounded-b-xl border-brown-600">
+                    <h2 className="mb-1 text-lg font-bold uppercase font-poppins text-brown-900">
                       {product.nama_produk}
                     </h2>
-                    <p className="text-sm flex font-medium items-center font-poppins capitalize text-brown-600 mb-5">
+                    <p className="flex items-center mb-5 text-sm font-medium capitalize font-poppins text-brown-600">
                       <TbCategory2 className="w-4 h-4 mr-2" />
                       {product.category_name}
                     </p>
-                    <h2 className="text-lg font-bold font-poppins text-brown-900 mb-3">
+                    <h2 className="mb-3 text-lg font-bold font-poppins text-brown-900">
                       <NumericFormat
                         value={`${product.harga_end_user}`}
                         displayType={"text"}
@@ -76,7 +76,9 @@ export default function ProductGrid(props: any) {
                       />
                     </h2>
                     <a
-                      href="https://orderan.lsstore.id/cs/all-cs-new"
+                      href={`https://lsskincare.orderonline.id/${product.nama_produk
+                        .replaceAll(" ", "-")
+                        .toLowerCase()}`}
                       className="w-full -translate-y-5 -mb-[50px] delay-100 duration-150 transform ease-in-out origin-top-left scale-y-0 group-hover:translate-y-0 group-hover:mb-0 group-hover:scale-y-100 text-base font-poppins font-medium bg-pic-900 text-white py-1.5 px-4 rounded-xl shadow-inner flex justify-center items-center"
                     >
                       <TbShoppingCart className="w-5 h-5 mr-2" /> Order Now

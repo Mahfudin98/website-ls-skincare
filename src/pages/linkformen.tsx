@@ -94,7 +94,13 @@ export default function LinkFormen() {
             <div className="px-4 py-1.5 bg-pic-200 group-hover:bg-pic-300 group-hover:scale-[1.01] duration-300 delay-75 ease-in-out rounded-xl w-full">
               <div className="flex items-center justify-between w-full">
                 <div className="relative flex items-center justify-center w-16 h-16 p-2 overflow-hidden border rounded-full">
-                  <AiOutlineGlobal className="w-[350px] h-[350px]" />
+                  <Image
+                    src="/logo-formen.png"
+                    className="w-full h-full rounded-full"
+                    width={350}
+                    height={350}
+                    alt="Whatsapp"
+                  />
                 </div>
                 <h1 className="mb-0 lg:text-2xl">Website Formen</h1>
                 <FiExternalLink className="w-8 h-8 pb-1" />
