@@ -48,7 +48,7 @@ export default function LinkFormen() {
             </div>
           </a>
           <a
-            href="https://s.lazada.co.id/s.PM6Dw"
+            href="https://s.lazada.co.id/s.N277r"
             className="flex flex-col items-center justify-center group"
           >
             <div className="px-4 py-1.5 bg-pic-200 group-hover:bg-pic-300 group-hover:scale-[1.01] duration-300 delay-75 ease-in-out rounded-xl w-full">
