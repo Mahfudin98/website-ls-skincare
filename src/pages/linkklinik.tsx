@@ -21,7 +21,10 @@ export default function LinkKlinik() {
         ></meta>
         <meta property="og:url" content="https://pusat.lsskincare.id/"></meta>
       </Head>
-      <Breadcrumb title="Link Formen" navigate="link formen" />
+      <Breadcrumb
+        title="Link LS Aesthetic Klinik"
+        navigate="link LS Aesthetic Klinik"
+      />
       <section className="w-full mt-4">
         <Carousel>
           <div className="relative flex items-center h-full max-h-[450px] w-full max-w-[768px] justify-center overflow-hidden rounded-lg shadow-md bg-gradient-to-tr from-pic-200 via-brown-100 to-pic-50">
