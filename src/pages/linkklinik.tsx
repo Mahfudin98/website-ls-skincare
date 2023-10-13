@@ -40,6 +40,15 @@ export default function LinkKlinik() {
             <Image
               height={1280}
               width={1280}
+              src="/klinik4.png"
+              alt="image1"
+              className="object-cover h-full max-h-[450px] w-full max-w-[768px] md:object-contain"
+            />
+          </div>
+          <div className="relative flex items-center h-full max-h-[450px] w-full max-w-[768px] justify-center overflow-hidden rounded-lg shadow-md bg-gradient-to-tr from-pic-200 via-brown-100 to-pic-50">
+            <Image
+              height={1280}
+              width={1280}
               src="/klinik1.png"
               alt="image1"
               className="object-cover h-full max-h-[450px] w-full max-w-[768px] md:object-contain"
