@@ -27,7 +27,7 @@ export default function LinkMarket() {
       <section className="container min-h-[65vh] mx-auto mt-6">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <a
-            href="https://shp.ee/hqz6jgb"
+            href="https://shope.ee/6pbyKRozrf"
             className="flex flex-col items-center justify-center group"
           >
             <div className="px-4 py-1.5 bg-pic-200 group-hover:bg-pic-300 group-hover:scale-[1.01] duration-300 delay-75 ease-in-out rounded-xl w-full">
@@ -47,7 +47,7 @@ export default function LinkMarket() {
             </div>
           </a>
           <a
-            href="https://s.lazada.co.id/s.OaJvE"
+            href="https://s.lazada.co.id/s.opB2p"
             className="flex flex-col items-center justify-center group"
           >
             <div className="px-4 py-1.5 bg-pic-200 group-hover:bg-pic-300 group-hover:scale-[1.01] duration-300 delay-75 ease-in-out rounded-xl w-full">
