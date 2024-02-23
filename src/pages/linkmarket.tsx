@@ -67,7 +67,7 @@ export default function LinkMarket() {
             </div>
           </a>
           <a
-            href="https://orderan.lsstore.id/cs/all-cs-new"
+            href="https://orderan.lsskincare.id/cs/all-cs-new"
             className="flex flex-col items-center justify-center group"
           >
             <div className="px-4 py-1.5 bg-pic-200 group-hover:bg-pic-300 group-hover:scale-[1.01] duration-300 delay-75 ease-in-out rounded-xl w-full">
@@ -87,7 +87,7 @@ export default function LinkMarket() {
             </div>
           </a>
           <a
-            href="https://orderan.lsstore.id/cs/join-reseller-new"
+            href="https://orderan.lsskincare.id/cs/join-reseller-new"
             className="flex flex-col items-center justify-center group"
           >
             <div className="px-4 py-1.5 bg-pic-200 group-hover:bg-pic-300 group-hover:scale-[1.01] duration-300 delay-75 ease-in-out rounded-xl w-full">
@@ -107,7 +107,7 @@ export default function LinkMarket() {
             </div>
           </a>
           <a
-            href="https://orderan.lsstore.id/cs/join-agen"
+            href="https://orderan.lsskincare.id/cs/join-agen"
             className="flex flex-col items-center justify-center group"
           >
             <div className="px-4 py-1.5 bg-pic-200 group-hover:bg-pic-300 group-hover:scale-[1.01] duration-300 delay-75 ease-in-out rounded-xl w-full">

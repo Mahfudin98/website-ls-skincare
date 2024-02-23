@@ -88,7 +88,7 @@ export default function ProductGrid(props: any) {
                         <TbShoppingCart className="w-5 h-5 mr-2" /> Order Now
                       </a> */}
                       <a
-                        href="https://orderan.lsstore.id/cs/all-cs-new"
+                        href="https://orderan.lsskincare.id/cs/all-cs-new"
                         className="flex items-center justify-center p-4 mt-3 text-base font-medium text-white shadow-inner w-fit font-poppins bg-pic-900 rounded-xl"
                       >
                         <TbShoppingCart className="w-5 h-5 mr-2" /> Order Now

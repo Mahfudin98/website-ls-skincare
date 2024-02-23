@@ -148,7 +148,7 @@ export default function LinkKlinik() {
             </div>
           </a>
           <a
-            href="https://orderan.lsstore.id/cs/aesthetic-clinic"
+            href="https://orderan.lsskincare.id/cs/aesthetic-clinic"
             className="flex flex-col items-center justify-center group"
           >
             <div className="px-4 py-1.5 bg-pic-200 group-hover:bg-pic-300 group-hover:scale-[1.01] duration-300 delay-75 ease-in-out rounded-xl w-full">

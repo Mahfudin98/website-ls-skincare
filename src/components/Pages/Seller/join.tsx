@@ -39,7 +39,7 @@ export default function Join() {
                 </h3>
               </div>
               <a
-                href="https://orderan.lsstore.id/cs/all-cs-new"
+                href="https://orderan.lsskincare.id/cs/all-cs-new"
                 className="flex items-center justify-center w-full px-6 py-2 mb-6 text-lg font-semibold text-center text-white bg-brown-700 font-poppins rounded-3xl hover:bg-brown-800 focus:ring-4 focus:ring-brown-300"
               >
                 <ShoppingCartIcon className="w-6 h-6 mr-2" /> Shop Now
@@ -104,7 +104,7 @@ export default function Join() {
                 </h3>
               </div>
               <a
-                href="https://orderan.lsstore.id/cs/join-reseller-new"
+                href="https://orderan.lsskincare.id/cs/join-reseller-new"
                 className="flex items-center justify-center w-full px-6 py-2 mb-6 text-lg font-semibold text-center text-white bg-pic-800 font-poppins rounded-3xl hover:bg-pic-900 focus:ring-4 focus:ring-brown-300"
               >
                 <TbMoodDollar className="w-6 h-6 mr-2" /> Join Now
@@ -169,7 +169,7 @@ export default function Join() {
                 </h3>
               </div>
               <a
-                href="https://orderan.lsstore.id/cs/join-agen"
+                href="https://orderan.lsskincare.id/cs/join-agen"
                 className="flex items-center justify-center w-full px-6 py-2 mb-6 text-lg font-semibold text-center text-white bg-pic-600 font-poppins rounded-3xl hover:bg-pic-700 focus:ring-4 focus:ring-brown-300"
               >
                 <TbMoodDollar className="w-6 h-6 mr-2" /> Join Now
