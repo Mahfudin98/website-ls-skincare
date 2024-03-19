@@ -47,7 +47,7 @@ export default function LinkMarket() {
             </div>
           </a>
           <a
-            href="https://s.lazada.co.id/s.opB2p"
+            href="https://www.lazada.co.id/products/i5504928451.html?spm=a1zawh.24863640.table_online_product.45.5b054edfeoNfot"
             className="flex flex-col items-center justify-center group"
           >
             <div className="px-4 py-1.5 bg-pic-200 group-hover:bg-pic-300 group-hover:scale-[1.01] duration-300 delay-75 ease-in-out rounded-xl w-full">

@@ -28,7 +28,7 @@ export default function FooterCustom() {
           <div>
             <h1 className={styles["market-text"]}>Our Marketplace</h1>
             <div className="inline-flex -space-x-2 w-fit">
-              <a href="https://shp.ee/hqz6jgb">
+              <a href="https://shope.ee/6pbyKRozrf">
                 <Image
                   src="/icons/shopee.svg"
                   className={styles["market-image"]}
@@ -37,7 +37,7 @@ export default function FooterCustom() {
                   alt="Shopee"
                 />
               </a>
-              <a href="https://s.lazada.co.id/s.OaJvE">
+              <a href="https://www.lazada.co.id/products/i5504928451.html?spm=a1zawh.24863640.table_online_product.45.5b054edfeoNfot">
                 <Image
                   src="/icons/icons8-lazada-400.svg"
                   className={styles["market-image"]}
