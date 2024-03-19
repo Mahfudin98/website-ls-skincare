@@ -37,7 +37,7 @@ export default function FooterCustom() {
                   alt="Shopee"
                 />
               </a>
-              <a href="https://www.lazada.co.id/products/i5504928451.html?spm=a1zawh.24863640.table_online_product.45.5b054edfeoNfot">
+              <a href="https://www.lazada.co.id/shop/ls-skincare-offial-pusat/">
                 <Image
                   src="/icons/icons8-lazada-400.svg"
                   className={styles["market-image"]}
