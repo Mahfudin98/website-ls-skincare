@@ -175,7 +175,7 @@ export default function FooterCustom() {
                 </a>
               </li>
               <li className="mb-1">
-                <a href="tel:(0233)-8294315" className={styles["nav-li"]}>
+                <a href="tel:+622338293861" className={styles["nav-li"]}>
                   <QuestionMarkCircleIcon className="w-5 h-5 mr-1" /> Help Center
                 </a>
               </li>
