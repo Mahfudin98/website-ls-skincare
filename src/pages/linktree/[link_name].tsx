@@ -42,13 +42,13 @@ export default function LinkTree() {
       {isFound && (
         <section className="container p-2 mx-auto my-5">
           <div className="flex flex-col justify-start md:justify-center items-center w-full md:h-[600px]">
-            <div className="bg-pic-500 p-2 rounded-t-full rounded-br-full -rotate-45 mb-8">
+            <div className="p-2 mb-8 -rotate-45 rounded-t-full rounded-br-full bg-pic-500">
               <Image
-                src={"/logo.png"}
+                src={"/logo/vertical-02.png"}
                 height={1080}
                 width={1080}
                 alt="..."
-                className="w-32 object-cover bg-white p-2 rounded-full rotate-45"
+                className="object-cover w-32 p-2 rotate-45 bg-white rounded-full"
               />
             </div>
             <div className="px-4 py-2.5 bg-pic-500 rounded-2xl shadow-md mb-5">

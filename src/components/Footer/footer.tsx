@@ -18,7 +18,7 @@ export default function FooterCustom() {
           <div>
             <h1 className={styles["logo-text"]}>LS Skincare</h1>
             <Image
-              src="/logo.png"
+              src="/logo/horizon-01.png"
               className={styles["logo-image"]}
               width={350}
               height={350}
@@ -175,8 +175,8 @@ export default function FooterCustom() {
                 </a>
               </li>
               <li className="mb-1">
-                <a href="#" className={styles["nav-li"]}>
-                  <QuestionMarkCircleIcon className="w-5 h-5 mr-1" /> Sitemap
+                <a href="tel:(0233)-8294315" className={styles["nav-li"]}>
+                  <QuestionMarkCircleIcon className="w-5 h-5 mr-1" /> Help Center
                 </a>
               </li>
             </ul>

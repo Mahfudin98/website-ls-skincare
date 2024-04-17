@@ -5,7 +5,7 @@
     @apply self-center text-2xl mb-3 font-semibold text-white whitespace-nowrap dark:text-white;
   }
   .logo-image {
-    @apply inline-block w-12 h-12 p-2 rounded-full bg-white ring-2 ring-pic-300;
+    @apply inline-block w-auto h-20 -mt-8;
   }
   .market-text {
     @apply self-center mb-3 text-base font-semibold text-white whitespace-nowrap dark:text-white;

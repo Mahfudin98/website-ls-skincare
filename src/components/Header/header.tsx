@@ -34,16 +34,16 @@ export default function HeaderCustom() {
   }, [setFixed, fixedRef]);
   return (
     <header ref={fixedRef} className={`${fixed}`}>
-      <div className="container mx-auto px-4 md:py-2">
+      <div className="container px-4 mx-auto md:py-2">
         <nav className={styles.nav}>
           <div className={styles["nav-flex"]}>
             <Link href="/" className="flex items-center">
               <Image
-                src="/logo.png"
+                src="/logo/vertical-06.png"
                 className="object-cover w-8 h-8 mr-3"
                 height={150}
                 width={150}
-                alt="Flowbite Logo"
+                alt="LS Logo"
               />
               <span className={styles["logo-text"]}>LS Skincare</span>
             </Link>
