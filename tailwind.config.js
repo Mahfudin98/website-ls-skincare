@@ -12,7 +12,8 @@ module.exports = {
     fontFamily: {
       poppins: "Poppins",
       dongle: "Dongle",
-      sofia: "Sofia Sans Condensed"
+      sofia: "Sofia Sans Condensed",
+      lato: "Lato",
     },
     colors: {
       // pic

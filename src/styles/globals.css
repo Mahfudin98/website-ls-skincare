@@ -16,6 +16,22 @@
   }
 }
 
+/* Mengubah tampilan scrollbar WebKit */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Styling thumb scrollbar */
+::-webkit-scrollbar-thumb {
+  @apply bg-pic-800; /* Ganti dengan warna yang Anda inginkan */
+  border-radius: 6px; /* Membuat thumb menjadi bulat */
+}
+
+/* Styling track scrollbar */
+::-webkit-scrollbar-track {
+  @apply bg-white; /* Ganti dengan warna yang Anda inginkan */
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
