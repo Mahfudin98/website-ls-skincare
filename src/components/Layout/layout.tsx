@@ -1,7 +1,8 @@
 import Head from "next/head";
 import HeaderCustom from "../Header/header";
 import FooterCustom from "../Footer/footer";
-import { ReactNode } from "react";
+import { ReactNode, useEffect } from "react";
+import Cookies from "js-cookie";
 // import ChatBubble from "../Widget/Chat/chat_buble";
 
 interface LayoutProps {
@@ -10,6 +11,33 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
   const { children } = props;
+  const generateRandomString = (length: number) => {
+    const charset =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let randomString = "";
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * charset.length);
+      randomString += charset[randomIndex];
+    }
+    return randomString;
+  };
+  const setCookieIfNotExists = (): void => {
+    const cookieName: string = "token";
+    const cookieValue: string = generateRandomString(32);
+
+    // Cek apakah cookie sudah terpasang
+    const existingCookie: string | undefined = Cookies.get(cookieName);
+
+    if (!existingCookie) {
+      // Jika cookie belum terpasang, set cookie
+      Cookies.set(cookieName, cookieValue, { expires: 7 }); // Expires dalam 365 hari
+    } else {
+      console.log("Cookie already exists:", cookieName);
+    }
+  };
+  useEffect(() => {
+    setCookieIfNotExists();
+  });
   return (
     <>
       <Head>

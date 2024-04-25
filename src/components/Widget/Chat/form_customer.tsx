@@ -10,9 +10,17 @@ import {
 import Cookies from "js-cookie";
 import { useEffect, useState } from "react";
 
-export default function FormCustomer() {
+interface FormCustomerProps {
+  setShowHistory: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+export default function FormCustomer(props: FormCustomerProps) {
+  const { setShowHistory } = props;
+  const [isLoad, setIsLoad] = useState(false);
+  const handleShowHistory = () => {
+    setShowHistory(true);
+  };
   const { customer, submitCustomer } = useCustomer();
-  const { historyChat, setShowHistory } = useMessage();
   const [nama, setNama] = useState("");
   const [noHP, setNoHP] = useState("");
   const getCookie = (cookieName: any) => {
@@ -21,17 +29,36 @@ export default function FormCustomer() {
 
   const submit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
+    setIsLoad(true);
     const cookieValue = getCookie("token");
     submitCustomer({
       nama: nama,
       no_hp: noHP,
       token: cookieValue
+    }).then(() => {
+      setTimeout(() => {
+        setIsLoad(false);
+      }, 3000);
+      setTimeout(() => {
+        handleShowHistory();
+      }, 2000);
     });
-    setShowHistory(true);
-    historyChat();
   };
   return (
     <div className="relative">
+      <div className="bg-pic-900 relative flex px-3 py-2.5 rounded-t-lg justify-between">
+        <div className="p-4">
+          <h1 className="mb-0 capitalize card-title text-base-100">
+            Selamat datang di chat boot
+          </h1>
+          <h2 className="mb-3 text-xl font-bold uppercase font-lato text-base-300">
+            LS Skincare
+          </h2>
+          <p className="text-base text-base-100">
+            Mohon isi Nama dan No HP dulu ya
+          </p>
+        </div>
+      </div>
       <div className="p-4 bg-pic-50 h-[350px] lg:h-[350px] 2xl:h-[450px]">
         <form
           onSubmit={submit}
@@ -63,13 +90,19 @@ export default function FormCustomer() {
               onChange={(e) => setNoHP(e.target.value)}
             />
           </label>
-
-          <button
-            type="submit"
-            className="border-none btn bg-pic-600 hover:bg-pic-700 text-base-100"
-          >
-            Mulai Chat
-          </button>
+          {!isLoad ? (
+            <button
+              type="submit"
+              className="border-none btn bg-pic-600 hover:bg-pic-700 text-base-100"
+            >
+              Mulai Chat
+            </button>
+          ) : (
+            <button className="btn" disabled>
+              <span className="loading loading-spinner"></span>
+              loading
+            </button>
+          )}
         </form>
       </div>
     </div>

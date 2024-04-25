@@ -4,19 +4,43 @@ import { Customer } from "customer";
 import { useEffect, useState } from "react";
 import useSWR from "swr";
 import { useMessage } from "./message";
+import Cookies from "js-cookie";
 
 export const useCustomer = () => {
   const csrf = () => $axiosChat.get("/sanctum/csrf-cookie");
-  const { historyChat, setShowHistory } = useMessage();
+  const { historyChat } = useMessage();
   const [customer, setCustomer] = useState({} as Customer);
-
+  const getCookie = (cookieName: any) => {
+    return Cookies.get(cookieName);
+  };
   const submitCustomer = async ({ ...props }) => {
     await csrf();
+    return new Promise<any>((resolve, reject) => {
+      $axiosChat
+        .post("/api/chat/customer-store", props)
+        .then((res: any) => {
+          setCustomer(res.data.data);
+          historyChat();
+          resolve(res.data);
+        })
+        .catch((err: any) => {
+          reject(err);
+        });
+    });
+  };
 
-    $axiosChat.post("/api/chat/customer-store", props).then((res: any) => {
-      setCustomer(res.data.data);
-      historyChat();
-      setShowHistory(true);
+  const getCustomer = () => {
+    const cookieValue = getCookie("token");
+    return new Promise<any>((resolve, reject) => {
+      $axiosChat
+        .get(`/api/chat/customer?token=${cookieValue}`)
+        .then((res: any) => {
+          setCustomer(res.data.data);
+          resolve(res.data);
+        })
+        .catch((err: any) => {
+          reject(err);
+        });
     });
   };
 
@@ -24,5 +48,5 @@ export const useCustomer = () => {
     customer;
   }, [customer]);
 
-  return { customer, submitCustomer };
+  return { customer, submitCustomer, getCustomer };
 };
