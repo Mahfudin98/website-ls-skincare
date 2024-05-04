@@ -3,7 +3,7 @@ import HeaderCustom from "../Header/header";
 import FooterCustom from "../Footer/footer";
 import { ReactNode, useEffect } from "react";
 import Cookies from "js-cookie";
-// import ChatBubble from "../Widget/Chat/chat_buble";
+import ChatBubble from "../Widget/Chat/chat_buble";
 
 interface LayoutProps {
   children: ReactNode;
@@ -55,7 +55,7 @@ export default function Layout(props: LayoutProps) {
         <HeaderCustom />
         <main className="container px-4 mx-auto">{children}</main>
         <FooterCustom />
-        {/* <ChatBubble /> */}
+        <ChatBubble />
       </main>
     </>
   );

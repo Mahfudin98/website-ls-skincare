@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const $axiosChat = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "https://api-website.lsskincare.id",
   headers: {
     "X-Requested-With": "XMLHttpRequest"
   },

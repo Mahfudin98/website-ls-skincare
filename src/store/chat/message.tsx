@@ -7,6 +7,7 @@ import Cookies from "js-cookie";
 export const useMessage = () => {
   const csrf = () => $axiosChat.get("/sanctum/csrf-cookie");
   const [message, setMessage] = useState<string[]>([]);
+  const [typeMessage, setTypeMessage] = useState<string[]>([]);
   const [history, setHistory] = useState<string[]>([]);
   const [show, setShow] = useState(true);
   const [showHistory, setShowHistory] = useState(false);
@@ -17,13 +18,33 @@ export const useMessage = () => {
     return Cookies.get(cookieName);
   };
 
-  const listMessage = () => {
-    $axiosChat
-      .get(`/api/index`)
-      .then((res: any) => setMessage(res.data.data))
-      .catch((error) => {
-        if (error.response.status !== 409) throw error;
-      });
+  const listMessage = (type:string) => {
+    return new Promise<any>((resolve, reject) => {
+      $axiosChat
+        .get(`/api/message?type=${type}`)
+        .then((res: any) => {
+          setMessage(res.data.data);
+          resolve(res.data);
+        })
+        .catch((error) => {
+          if (error.response.status !== 409) throw error;
+          reject(error.reverse);
+        });
+    });
+  };
+
+  const listTypeMesage = () => {
+    return new Promise<any>((resolve, reject) => {
+      $axiosChat
+        .get(`/api/message/type`)
+        .then((res: any) => {
+          setTypeMessage(res.data.data);
+          resolve(res.data);
+        })
+        .catch((err: any) => {
+          reject(err.response);
+        });
+    });
   };
 
   const historyChat = () => {
@@ -65,7 +86,8 @@ export const useMessage = () => {
     show;
     showHistory;
     showChat;
-  }, [history, message, show, showChat, showHistory]);
+    typeMessage;
+  }, [history, message, show, showChat, showHistory, typeMessage]);
 
   return {
     listMessage,
@@ -73,10 +95,12 @@ export const useMessage = () => {
     submitChat,
     toogleChat,
     setShowHistory,
+    listTypeMesage,
     showChat,
     showHistory,
     history,
     message,
-    show
+    show,
+    typeMessage
   };
 };

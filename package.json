@@ -29,6 +29,7 @@
     "mapbox-gl": "^2.15.0",
     "moment": "^2.29.4",
     "next": "13.3.0",
+    "next-auth": "^4.24.7",
     "next-translate": "^2.4.0",
     "nextjs-cors": "^2.1.2",
     "postcss": "8.4.21",

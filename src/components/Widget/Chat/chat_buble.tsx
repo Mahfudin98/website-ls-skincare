@@ -9,7 +9,7 @@ import { useMessage } from "@/store/chat/message";
 export default function ChatBubble() {
   const { toogleChat, showChat } = useMessage();
   return (
-    <div className="fixed bottom-5 right-5 z-[991]">
+    <div className="fixed bottom-5 right-5 z-[9999]">
       <div
         className={`relative flex justify-end lg:w-[400px] !showChat ? "scale-0" : "scale-100"`}
       >
@@ -20,7 +20,7 @@ export default function ChatBubble() {
         >
           <button
             onClick={() => toogleChat()}
-            className="absolute top-2 right-2 z-50"
+            className="absolute z-50 top-2 right-2"
           >
             <XCircleIcon className="self-center w-8 h-8 text-white" />
           </button>

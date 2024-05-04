@@ -10,10 +10,20 @@ import Cookies from "js-cookie";
 import { useCustomer } from "@/store/chat/customer";
 
 export default function FormChat() {
-  const { message, history, show, historyChat, listMessage, submitChat } =
-    useMessage();
+  const {
+    message,
+    history,
+    show,
+    typeMessage,
+    historyChat,
+    listMessage,
+    submitChat,
+    listTypeMesage
+  } = useMessage();
   const { customer, getCustomer } = useCustomer();
+  const [type, setType] = useState("");
   const [load, setLoad] = useState(true);
+  const [loadMessage, setLoadMessage] = useState(true);
   const getCookie = (cookieName: any) => {
     return Cookies.get(cookieName);
   };
@@ -24,15 +34,23 @@ export default function FormChat() {
       message: formData
     });
   };
+
+  const fillterType = (code: string) => {
+    setType(code);
+    listMessage(type);
+  };
   useEffect(() => {
-    if (message?.length == 0) {
-      listMessage();
+    if (loadMessage) {
+      listMessage(type).then(() => setLoadMessage(false));
     }
     if (load) {
       getCustomer().then(() => {
         setLoad(false);
       });
       historyChat();
+    }
+    if (typeMessage?.length == 0) {
+      listTypeMesage();
     }
   });
   return (
@@ -51,16 +69,17 @@ export default function FormChat() {
           </div>
           <div className="self-center">
             <h2 className="text-lg font-medium text-white font-poppins">
-              Hallo <span className="capitalize font-semibold">{customer.nama}</span>!
+              Hallo{" "}
+              <span className="font-semibold capitalize">{customer.nama}</span>!
             </h2>
-            <p className="text-base font-normal text-pic-200 font-poppins">
+            <p className="text-sm font-normal font-lato text-pic-200">
               {customer.no_hp}
             </p>
           </div>
         </div>
       </div>
       {/* content */}
-      <div className="p-4 bg-pic-50 h-[350px] lg:h-[380px] 2xl:h-[450px] overflow-auto flex flex-col-reverse">
+      <div className="p-4 bg-pic-100 h-[350px] lg:h-[380px] 2xl:h-[450px] overflow-auto flex flex-col-reverse">
         {history.map((chat: any, index) => {
           return (
             <Fragment key={index}>
@@ -86,7 +105,7 @@ export default function FormChat() {
                 </div>
               )}
               <div className="chat chat-end">
-                <div className="text-base font-medium leading-tight chat-bubble bg-pic-800 text-base-100 font-lato">
+                <div className="text-base font-medium leading-tight chat-bubble bg-pic-400 text-base-100 font-lato">
                   {chat.pertanyaan}
                 </div>
               </div>
@@ -95,18 +114,44 @@ export default function FormChat() {
         })}
       </div>
       {/* footer */}
-      <div className="px-4 py-2.5 border-t border-b bg-pic-100 flex justify-between gap-2 overflow-x-auto max-w-[350px] lg:max-w-[400px]">
-        {message.map((msg: any, index) => {
-          return (
-            <>
+      <div className="p-2 border-t bg-pic-100 border-pic-900">
+        <span className="mb-1 btn btn-xs rounded-btn btn-info">
+          Tipe pesan :
+        </span>
+        <div className="flex gap-2 overflow-x-auto max-w-[350px] lg:max-w-[400px]">
+          <button
+            onClick={() => fillterType("")}
+            className={`capitalize btn btn-xs rounded-btn ${
+              type == "" && "btn-primary"
+            }`}
+          >
+            All
+          </button>
+          {typeMessage.map((typ: any, index) => {
+            return (
               <button
                 key={index}
-                className="normal-case border-none shadow-xl btn btn-xs bg-pic-500 hover:bg-pic-600 text-base-100 rounded-box"
-                onClick={() => submitForm(msg.pertanyaan)}
+                onClick={() => fillterType(typ.id)}
+                className={`capitalize btn btn-xs rounded-btn ${
+                  type == typ.id && "btn-primary"
+                }`}
               >
-                {msg.pertanyaan}
+                {typ.type}
               </button>
-            </>
+            );
+          })}
+        </div>
+      </div>
+      <div className="px-2 pb-2 border-t border-b bg-pic-100 flex justify-between gap-2 overflow-x-auto max-w-[350px] lg:max-w-[400px]">
+        {message.map((msg: any, index) => {
+          return (
+            <button
+              key={index}
+              className="normal-case border-none shadow-xl btn btn-xs bg-pic-500 hover:bg-pic-600 text-base-100 rounded-box"
+              onClick={() => submitForm(msg.pertanyaan)}
+            >
+              {msg.pertanyaan}
+            </button>
           );
         })}
       </div>

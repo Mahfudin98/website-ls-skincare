@@ -11,13 +11,17 @@ export const useCustomer = () => {
   const { historyChat } = useMessage();
   const [customer, setCustomer] = useState({} as Customer);
   const getCookie = (cookieName: any) => {
-    return Cookies.get(cookieName);
+    return Cookies.withAttributes({ path: '/', domain: 'api-website.lsskincare.id' }).get(cookieName);
   };
   const submitCustomer = async ({ ...props }) => {
     await csrf();
     return new Promise<any>((resolve, reject) => {
       $axiosChat
-        .post("/api/chat/customer-store", props)
+        .post("/api/chat/customer-store", props, {
+          headers: {
+            "X-CSRF-Token": getCookie("XSRF-TOKEN")
+          }
+        })
         .then((res: any) => {
           setCustomer(res.data.data);
           historyChat();
