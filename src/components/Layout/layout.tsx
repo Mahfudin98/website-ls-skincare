@@ -4,6 +4,8 @@ import FooterCustom from "../Footer/footer";
 import { ReactNode, useEffect } from "react";
 import Cookies from "js-cookie";
 import ChatBubble from "../Widget/Chat/chat_buble";
+import { useTraffic } from "@/store/chat/traffic";
+import { useRouter } from "next/router";
 
 interface LayoutProps {
   children: ReactNode;
@@ -11,6 +13,7 @@ interface LayoutProps {
 
 export default function Layout(props: LayoutProps) {
   const { children } = props;
+  const { setTraffic } = useTraffic();
   const generateRandomString = (length: number) => {
     const charset =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
@@ -35,8 +38,15 @@ export default function Layout(props: LayoutProps) {
       console.log("Cookie already exists:", cookieName);
     }
   };
+  const path = useRouter();
   useEffect(() => {
     setCookieIfNotExists();
+
+    const referrerUrl = document.referrer;
+    setTraffic({
+      path: path.pathname,
+      referal: referrerUrl
+    });
   });
   return (
     <>
