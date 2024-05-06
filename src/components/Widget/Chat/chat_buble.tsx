@@ -11,7 +11,7 @@ export default function ChatBubble() {
   return (
     <div className="fixed bottom-5 right-5 z-[9999]">
       <div
-        className={`relative flex justify-end lg:w-[400px] !showChat ? "scale-0" : "scale-100"`}
+        className={`relative flex justify-end w-fit ${!showChat ? "h-10" : "h-full"}  lg:w-[400px]`}
       >
         <div
           className={`mb-20 relative border border-pic-800 -mr-16 shadow-md rounded-lg w-full transform transition-transform ease-in-out duration-300 delay-100 origin-bottom-right ${
