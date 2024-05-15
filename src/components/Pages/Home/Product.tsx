@@ -99,20 +99,20 @@ export default function ProductHome() {
                         prefix={"Rp. "}
                       />
                     </h2>
-                    <a
+                    {/* <a
                       href="https://orderan.lsskincare.id/cs/all-cs-new"
                       className="w-full -translate-y-5 -mb-[50px] delay-100 duration-150 transform ease-in-out origin-top-left scale-y-0 group-hover:translate-y-0 group-hover:mb-0 group-hover:scale-y-100 text-base font-poppins font-medium bg-pic-900 text-white py-1.5 px-4 rounded-xl shadow-inner flex justify-center items-center"
                     >
                       <TbShoppingCart className="w-5 h-5 mr-2" /> Order Now
-                    </a>
-                    {/* <a
+                    </a> */}
+                    <a
                       href={`https://lsskincare.orderonline.id/${product.nama_produk
                         .replaceAll(" ", "-")
                         .toLowerCase()}`}
                       className="w-full -translate-y-5 -mb-[50px] delay-100 duration-150 transform ease-in-out origin-top-left scale-y-0 group-hover:translate-y-0 group-hover:mb-0 group-hover:scale-y-100 text-base font-poppins font-medium bg-pic-900 text-white py-1.5 px-4 rounded-xl shadow-inner flex justify-center items-center"
                     >
                       <TbShoppingCart className="w-5 h-5 mr-2" /> Order Now
-                    </a> */}
+                    </a>
                   </div>
                 </div>
               </div>

@@ -79,20 +79,20 @@ export default function ProductGrid(props: any) {
                       </h2>
                     </div>
                     <div className="flex items-end w-full h-1/3">
-                      {/* <a
+                      <a
                         href={`https://lsskincare.orderonline.id/${product.nama_produk
                           .replaceAll(" ", "-")
                           .toLowerCase()}`}
                         className="flex items-center justify-center p-4 mt-3 text-base font-medium text-white shadow-inner w-fit font-poppins bg-pic-900 rounded-xl"
                       >
                         <TbShoppingCart className="w-5 h-5 mr-2" /> Order Now
-                      </a> */}
-                      <a
+                      </a>
+                      {/* <a
                         href="https://orderan.lsskincare.id/cs/all-cs-new"
                         className="flex items-center justify-center p-4 mt-3 text-base font-medium text-white shadow-inner w-fit font-poppins bg-pic-900 rounded-xl"
                       >
                         <TbShoppingCart className="w-5 h-5 mr-2" /> Order Now
-                      </a>
+                      </a> */}
                     </div>
                   </div>
                 </div>
