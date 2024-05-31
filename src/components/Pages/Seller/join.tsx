@@ -159,7 +159,7 @@ export default function Join() {
                 Agen
               </span>
 
-              <h1>IDR 27Juta</h1>
+              <h1>IDR 50Juta</h1>
               <div className="my-3">
                 <h3 className="text-sm font-medium font-poppins text-brown-700">
                   Untuk customer agen
